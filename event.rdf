@@ -19,10 +19,10 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <Ontology rdf:about="http://www.spi.com/event.owl">
         <rdfs:comment>An event ontology</rdfs:comment>
-        <imports rdf:resource="http://dl.dropboxusercontent.com/u/983997/ontologies/context/businesspartner.owl"/>
-        <imports rdf:resource="http://dl.dropboxusercontent.com/u/983997/ontologies/context/economicobject.owl"/>
-        <imports rdf:resource="http://dl.dropboxusercontent.com/u/983997/ontologies/system/system.owl"/>
-        <imports rdf:resource="http://dl.dropboxusercontent.com/u/983997/ontologies/workflow/workflow.owl"/>
+        <imports rdf:resource="https://raw.githubusercontent.com/sonaris/spi/master/businesspartner.rdf"/>
+        <imports rdf:resource="https://raw.githubusercontent.com/sonaris/spi/master/economicobject.rdf"/>
+        <imports rdf:resource="https://raw.githubusercontent.com/sonaris/spi/master/system.rdf"/>
+        <imports rdf:resource="https://raw.githubusercontent.com/sonaris/spi/master/workflow.rdf"/>
     </Ontology>
     
 
