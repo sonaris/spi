@@ -1,0 +1,72 @@
+@(message: String)
+
+@base("empty") {
+
+<script type="text/javascript">
+    $("#home").removeClass('active');
+    $("#data").removeClass('active');
+    $("#statistics").removeClass('active');
+    $("#summary").removeClass('active');
+    $("#customsparql").addClass('active');
+</script>
+
+
+
+<style>.CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}</style>
+
+
+    <div class="page-header">
+        <h1>Custom SPARQL Query</h1>
+    </div>
+        <button type="button" class="btn btn-primary" onclick="getQueries()">Open Query</button>
+        <button type="button" class="btn btn-primary" onclick="saveQuery()">Save Query</button>
+        <br/><br/>
+    <form>
+        <textarea  id="code" name="code">
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX event: <http://www.spi.com/event.owl#>
+PREFIX workflow: <http://www.spi.com/workflow.owl#>
+PREFIX economicobject: <http://www.spi.com/economicobject.owl#>
+PREFIX businesspartner: <http://www.spi.com/businesspartner.owl#>
+PREFIX system: <http://www.spi.com/system.owl#>
+PREFIX afn: <http://jena.hpl.hp.com/ARQ/function#>
+
+SELECT ?s ?p ?o
+WHERE {
+   ?s ?p ?o
+}
+        </textarea>
+    </form>
+    <br/>
+    <button type="button" class="btn btn-primary" onclick="showQueryResult(editor.getValue())">Execute Query</button>
+    <h2>Query Result</h2>
+
+    <div id="queryResult">
+        <table id="sparqlResult" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+            <tr>
+                <th>?s</th>
+                <th>?p</th>
+                <th>?o</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="@routes.Assets.at("js/sparql/codemirror.js")"></script>
+<script src="@routes.Assets.at("js/sparql/sparql.js")"></script>
+
+<script src="@routes.Assets.at("js/custom/customsparql/customsparql.js")"></script>
+
+<script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+            mode: "application/x-sparql-query",
+            tabMode: "indent",
+            matchBrackets: true
+        });
+</script>
+
+}

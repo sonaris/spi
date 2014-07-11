@@ -1,0 +1,42 @@
+@(message: String)
+
+@base("empty") {
+
+<script type="text/javascript">
+    $("#home").removeClass('active');
+    $("#data").addClass('active');
+    $("#statistics").removeClass('active');
+    $("#summary").removeClass('active');
+    $("#customsparql").removeClass('active');
+</script>
+
+
+
+<br/>
+<br/>
+
+<div class="alert alert-success">Success! Well done its submitted.</div>
+
+<div class="btn-group" data-toggle="buttons">
+    <label id="exportXML" class="btn btn-default active">
+        <input type="radio" name="options"  checked> RDF/XML
+    </label>
+    <label id="exportJSON" class="btn btn-default">
+        <input type="radio" name="options" > RDF/JSON
+    </label>
+    <label id="exportTurtle" class="btn btn-default">
+        <input type="radio" name="options" > Turtle
+    </label>
+</div>
+<br/><br/>
+<button type="button" class="btn btn-primary" onclick="getExport()">Generate Export</button><br/><br/>
+<br/><br/>
+<textarea id="output" rows="30" cols="200">
+
+</textarea>
+
+<script src="@routes.Assets.at("js/custom/export/export.js")"></script>
+
+
+
+}
