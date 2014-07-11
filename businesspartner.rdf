@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <Ontology rdf:about="http://www.spi.com/businesspartner.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#hasMember -->
+
+    <ObjectProperty rdf:about="http://www.spi.com/businesspartner.owl#hasMember">
+        <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#Organization"/>
+        <rdfs:range rdf:resource="http://www.spi.com/businesspartner.owl#Person"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#hasOrganizationPart -->
+
+    <ObjectProperty rdf:about="http://www.spi.com/businesspartner.owl#hasOrganizationPart">
+        <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#Organization"/>
+        <rdfs:range rdf:resource="http://www.spi.com/businesspartner.owl#Organization"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#hasAddressCity -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/businesspartner.owl#hasAddressCity">
+        <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#hasAddressCountry -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/businesspartner.owl#hasAddressCountry">
+        <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#hasAddressHouseNumber -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/businesspartner.owl#hasAddressHouseNumber">
+        <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#hasAddressStreet -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/businesspartner.owl#hasAddressStreet">
+        <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#hasEmailAddress -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/businesspartner.owl#hasEmailAddress">
+        <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#hasFirstName -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/businesspartner.owl#hasFirstName">
+        <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#hasGroupName -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/businesspartner.owl#hasGroupName">
+        <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#Group"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#hasLastName -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/businesspartner.owl#hasLastName">
+        <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#hasOrganizationName -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/businesspartner.owl#hasOrganizationName">
+        <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#Organization"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#AutonomousAgent -->
+
+    <Class rdf:about="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#Customer -->
+
+    <Class rdf:about="http://www.spi.com/businesspartner.owl#Customer">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Role"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#Employee -->
+
+    <Class rdf:about="http://www.spi.com/businesspartner.owl#Employee">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Role"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#FormalOrganization -->
+
+    <Class rdf:about="http://www.spi.com/businesspartner.owl#FormalOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Organization"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#Group -->
+
+    <Class rdf:about="http://www.spi.com/businesspartner.owl#Group">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#InformalOrganization -->
+
+    <Class rdf:about="http://www.spi.com/businesspartner.owl#InformalOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Organization"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#Marriage -->
+
+    <Class rdf:about="http://www.spi.com/businesspartner.owl#Marriage">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Group"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#Organization -->
+
+    <Class rdf:about="http://www.spi.com/businesspartner.owl#Organization">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#Person -->
+
+    <Class rdf:about="http://www.spi.com/businesspartner.owl#Person">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+        <hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#hasEmailAddress"/>
+            <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#hasFirstName"/>
+            <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#hasLastName"/>
+        </hasKey>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#Role -->
+
+    <Class rdf:about="http://www.spi.com/businesspartner.owl#Role"/>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#SharedLiving -->
+
+    <Class rdf:about="http://www.spi.com/businesspartner.owl#SharedLiving">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Group"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/businesspartner.owl#Supplier -->
+
+    <Class rdf:about="http://www.spi.com/businesspartner.owl#Supplier">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Role"/>
+    </Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
