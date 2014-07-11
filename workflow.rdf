@@ -1,0 +1,384 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <Ontology rdf:about="http://www.spi.com/workflow.owl">
+        <rdfs:comment>A workflow ontology based on XPDL</rdfs:comment>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#definedInPackage -->
+
+    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#definedInPackage">
+        <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Package"/>
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#hasIngoingTransition -->
+
+    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#hasIngoingTransition">
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#JoinControlFlow"/>
+        <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#hasJoin -->
+
+    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#hasJoin">
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+        <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#JoinControlFlow"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#hasOutgoingTransition -->
+
+    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#hasOutgoingTransition">
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#SplitControlFlow"/>
+        <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#hasSourceActivity -->
+
+    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#hasSourceActivity">
+        <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#hasSplit -->
+
+    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#hasSplit">
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+        <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#SplitControlFlow"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#hasTargetActivity -->
+
+    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#hasTargetActivity">
+        <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#partOfWorkflow -->
+
+    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#partOfWorkflow">
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+        <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#performedByApplication -->
+
+    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#performedByApplication">
+        <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#performedByParticipant -->
+
+    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#performedByParticipant">
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#NoneImplementationActivity"/>
+        <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#hasActivityName -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/workflow.owl#hasActivityName">
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#hasApplicationName -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/workflow.owl#hasApplicationName">
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#hasControlFlowType -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/workflow.owl#hasControlFlowType">
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#ControlFlow"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first>AND</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first>XOR</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#hasPackageName -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/workflow.owl#hasPackageName">
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Package"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#hasParticipantName -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/workflow.owl#hasParticipantName">
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#hasTransitionCondition -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/workflow.owl#hasTransitionCondition">
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#hasTransitionName -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/workflow.owl#hasTransitionName">
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#hasWorkflowName -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/workflow.owl#hasWorkflowName">
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#hasWorkflowVersion -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/workflow.owl#hasWorkflowVersion">
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#Activity -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#Activity"/>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#Application -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#Application"/>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#ApplicationImplementationActivity -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#ApplicationImplementationActivity">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ImplementationActivity"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#ControlFlow -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#ControlFlow"/>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#HumanParticipant -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#HumanParticipant">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#ImplementationActivity -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#ImplementationActivity">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#JoinControlFlow -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#JoinControlFlow">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ControlFlow"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#NoneImplementationActivity -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#NoneImplementationActivity">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ImplementationActivity"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#OrganizationalUnitParticipant -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#OrganizationalUnitParticipant">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#Package -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#Package"/>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#Participant -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#Participant"/>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#ResourceParticipant -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#ResourceParticipant">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#ResourceSetParticipant -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#ResourceSetParticipant">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#RoleParticipant -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#RoleParticipant">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#RouteActivity -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#RouteActivity">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#SplitControlFlow -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#SplitControlFlow">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ControlFlow"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#SubflowImplementationActivity -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#SubflowImplementationActivity">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ImplementationActivity"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#SystemParticipant -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#SystemParticipant">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#Transition -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#Transition"/>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#Workflow -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#Workflow"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
