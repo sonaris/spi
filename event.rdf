@@ -46,6 +46,15 @@
     
 
 
+    <!-- http://www.spi.com/event.owl#causedBy -->
+
+    <ObjectProperty rdf:about="&event;causedBy">
+        <rdfs:range rdf:resource="&event;Event"/>
+        <rdfs:domain rdf:resource="&event;Event"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://www.spi.com/event.owl#definedByActivity -->
 
     <ObjectProperty rdf:about="&event;definedByActivity">
@@ -375,144 +384,268 @@
      -->
 
     
-	<rdf:Description rdf:about="http://www.synthetic.com/model.rdf#Activity4">
-    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
-    <workflow:performedByParticipant rdf:resource="http://www.synthetic.com/model.rdf#Participant1"/>
-    <workflow:partOfWorkflow rdf:resource="http://www.synthetic.com/model.rdf#Workflow1"/>
-    <workflow:hasActivityName>Send Positive Answer</workflow:hasActivityName>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#ActivityEvent4">
-    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
-    <event:originatedFromActivityInstance rdf:resource="http://www.synthetic.com/model.rdf#ActivityInstance2"/>
-    <event:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4000</event:hasTimeMilli>
-    <event:precededBy rdf:resource="http://www.synthetic.com/model.rdf#ActivityEvent3"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#ActivityEvent6">
-    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
-    <event:originatedFromActivityInstance rdf:resource="http://www.synthetic.com/model.rdf#ActivityInstance3"/>
-    <event:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45657</event:hasTimeMilli>
-    <event:precededBy rdf:resource="http://www.synthetic.com/model.rdf#ActivityEvent5"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#WorkflowEvent2">
-    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
-    <event:originatedFromActivityInstance rdf:resource="http://www.synthetic.com/model.rdf#ActivityInstance1"/>
-    <event:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200000</event:hasTimeMilli>
-    <event:precededBy rdf:resource="http://www.synthetic.com/model.rdf#WorkflowEvent1"/>
-    <event:originatedFromWorkflowInstance rdf:resource="http://www.synthetic.com/model.rdf#WorkflowInstance1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#EconomicObject1">
-    <rdf:type rdf:resource="http://www.spi.com/economicobject.owl#Order"/>
-    <economicobject:hasOrderReferenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">test123</economicobject:hasOrderReferenceNumber>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#System1">
-    <rdf:type rdf:resource="http://www.spi.com/system.owl#WFMSystem"/>
-    <system:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synthetic1</system:hasName>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#Transition3">
-    <workflow:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</workflow:hasTransitionCondition>
-    <workflow:hasTargetActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity4"/>
-    <workflow:hasSourceActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity2"/>
-    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#Workflow1">
-    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
-    <workflow:hasWorkflowName>New Order</workflow:hasWorkflowName>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#Transition1">
-    <workflow:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</workflow:hasTransitionCondition>
-    <workflow:hasTargetActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity2"/>
-    <workflow:hasSourceActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity1"/>
-    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#ActivityInstance3">
-    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
-    <event:definedByActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity3"/>
-    <event:partOfWorkflowInstance rdf:resource="http://www.synthetic.com/model.rdf#WorkflowInstance1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#Activity2">
-    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#NoneImplementationActivity"/>
-    <workflow:performedByParticipant rdf:resource="http://www.synthetic.com/model.rdf#Participant1"/>
-    <workflow:partOfWorkflow rdf:resource="http://www.synthetic.com/model.rdf#Workflow1"/>
-    <workflow:hasActivityName>Verify Order</workflow:hasActivityName>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#ActivityInstance1">
-    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
-    <event:definedByActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity1"/>
-    <event:partOfWorkflowInstance rdf:resource="http://www.synthetic.com/model.rdf#WorkflowInstance1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#WorkflowInstance1">
-    <rdf:type rdf:resource="http://www.spi.com/event.owl#WorkflowInstance"/>
-    <event:definedByWorkflow rdf:resource="http://www.synthetic.com/model.rdf#Workflow1"/>
-    <event:hasBusinessPartnerContext rdf:resource="http://www.synthetic.com/model.rdf#BusinessPartner1"/>
-    <event:hasBusinessPartnerContext rdf:resource="http://www.synthetic.com/model.rdf#EconomicObject1"/>
-    <event:generatedBySystem rdf:resource="http://www.synthetic.com/model.rdf#System1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#ActivityEvent3">
-    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
-    <event:originatedFromActivityInstance rdf:resource="http://www.synthetic.com/model.rdf#ActivityInstance2"/>
-    <event:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</event:hasTimeMilli>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#ActivityEvent5">
-    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
-    <event:originatedFromActivityInstance rdf:resource="http://www.synthetic.com/model.rdf#ActivityInstance3"/>
-    <event:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</event:hasTimeMilli>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#ActivityEvent7">
-    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
-    <event:originatedFromActivityInstance rdf:resource="http://www.synthetic.com/model.rdf#ActivityInstance4"/>
-    <event:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</event:hasTimeMilli>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#WorkflowEvent1">
-    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
-    <event:originatedFromActivityInstance rdf:resource="http://www.synthetic.com/model.rdf#ActivityInstance1"/>
-    <event:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</event:hasTimeMilli>
-    <event:originatedFromWorkflowInstance rdf:resource="http://www.synthetic.com/model.rdf#WorkflowInstance1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#BusinessPartner1">
-    <rdf:type rdf:resource="http://www.spi.com/businesspartner.owl#Person"/>
-    <rdf:type rdf:resource="http://www.spi.com/businesspartner.owl#Customer"/>
-    <businesspartner:hasEmailAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">david.overfeld@uni-muenster.de</businesspartner:hasEmailAddress>
-    <businesspartner:hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Overfeld</businesspartner:hasLastName>
-    <businesspartner:hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David</businesspartner:hasFirstName>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#Transition2">
-    <workflow:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</workflow:hasTransitionCondition>
-    <workflow:hasTargetActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity3"/>
-    <workflow:hasSourceActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity2"/>
-    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#ActivityEvent8">
-    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
-    <event:originatedFromActivityInstance rdf:resource="http://www.synthetic.com/model.rdf#ActivityInstance4"/>
-    <event:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4786786</event:hasTimeMilli>
-    <event:precededBy rdf:resource="http://www.synthetic.com/model.rdf#ActivityEvent7"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#Activity1">
-    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
-    <workflow:performedByParticipant rdf:resource="http://www.synthetic.com/model.rdf#Participant1"/>
-    <workflow:partOfWorkflow rdf:resource="http://www.synthetic.com/model.rdf#Workflow1"/>
-    <workflow:hasActivityName>Retrieve New Order</workflow:hasActivityName>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#ActivityInstance4">
-    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
-    <event:definedByActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity4"/>
-    <event:partOfWorkflowInstance rdf:resource="http://www.synthetic.com/model.rdf#WorkflowInstance1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#Activity3">
-    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
-    <workflow:performedByParticipant rdf:resource="http://www.synthetic.com/model.rdf#Participant1"/>
-    <workflow:partOfWorkflow rdf:resource="http://www.synthetic.com/model.rdf#Workflow1"/>
-    <workflow:hasActivityName>Send Negative Answer</workflow:hasActivityName>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#ActivityInstance2">
-    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
-    <event:definedByActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity2"/>
-    <event:partOfWorkflowInstance rdf:resource="http://www.synthetic.com/model.rdf#WorkflowInstance1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.synthetic.com/model.rdf#Participant1">
-    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#RoleParticipant"/>
-    <workflow:hasParticipantName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ServiceAgent</workflow:hasParticipantName>
-  </rdf:Description>
+
+
+    <!-- http://www.synthetic.com/model.rdf#Activity1 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#Activity1">
+        <rdf:type rdf:resource="&workflow;ApplicationImplementationActivity"/>
+        <workflow:hasActivityName>Retrieve New Order</workflow:hasActivityName>
+        <workflow:performedByParticipant rdf:resource="http://www.synthetic.com/model.rdf#Participant1"/>
+        <workflow:partOfWorkflow rdf:resource="http://www.synthetic.com/model.rdf#Workflow1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#Activity2 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#Activity2">
+        <rdf:type rdf:resource="&workflow;NoneImplementationActivity"/>
+        <workflow:hasActivityName>Verify Order</workflow:hasActivityName>
+        <workflow:performedByParticipant rdf:resource="http://www.synthetic.com/model.rdf#Participant1"/>
+        <workflow:partOfWorkflow rdf:resource="http://www.synthetic.com/model.rdf#Workflow1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#Activity3 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#Activity3">
+        <rdf:type rdf:resource="&workflow;ApplicationImplementationActivity"/>
+        <workflow:hasActivityName>Send Negative Answer</workflow:hasActivityName>
+        <workflow:performedByParticipant rdf:resource="http://www.synthetic.com/model.rdf#Participant1"/>
+        <workflow:partOfWorkflow rdf:resource="http://www.synthetic.com/model.rdf#Workflow1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#Activity4 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#Activity4">
+        <rdf:type rdf:resource="&workflow;ApplicationImplementationActivity"/>
+        <workflow:hasActivityName>Send Positive Answer</workflow:hasActivityName>
+        <workflow:performedByParticipant rdf:resource="http://www.synthetic.com/model.rdf#Participant1"/>
+        <workflow:partOfWorkflow rdf:resource="http://www.synthetic.com/model.rdf#Workflow1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#ActivityEvent3 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#ActivityEvent3">
+        <rdf:type rdf:resource="&event;RunningEvent"/>
+        <event:hasTimeMilli rdf:datatype="&xsd;integer">3</event:hasTimeMilli>
+        <event:originatedFromActivityInstance rdf:resource="http://www.synthetic.com/model.rdf#ActivityInstance2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#ActivityEvent4 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#ActivityEvent4">
+        <rdf:type rdf:resource="&event;CompletedEvent"/>
+        <event:hasTimeMilli rdf:datatype="&xsd;integer">4000</event:hasTimeMilli>
+        <event:precededBy rdf:resource="http://www.synthetic.com/model.rdf#ActivityEvent3"/>
+        <event:originatedFromActivityInstance rdf:resource="http://www.synthetic.com/model.rdf#ActivityInstance2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#ActivityEvent5 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#ActivityEvent5">
+        <rdf:type rdf:resource="&event;RunningEvent"/>
+        <event:hasTimeMilli rdf:datatype="&xsd;integer">3</event:hasTimeMilli>
+        <event:originatedFromActivityInstance rdf:resource="http://www.synthetic.com/model.rdf#ActivityInstance3"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#ActivityEvent6 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#ActivityEvent6">
+        <rdf:type rdf:resource="&event;CompletedEvent"/>
+        <event:hasTimeMilli rdf:datatype="&xsd;integer">45657</event:hasTimeMilli>
+        <event:precededBy rdf:resource="http://www.synthetic.com/model.rdf#ActivityEvent5"/>
+        <event:originatedFromActivityInstance rdf:resource="http://www.synthetic.com/model.rdf#ActivityInstance3"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#ActivityEvent7 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#ActivityEvent7">
+        <rdf:type rdf:resource="&event;RunningEvent"/>
+        <event:hasTimeMilli rdf:datatype="&xsd;integer">3</event:hasTimeMilli>
+        <event:originatedFromActivityInstance rdf:resource="http://www.synthetic.com/model.rdf#ActivityInstance4"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#ActivityEvent8 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#ActivityEvent8">
+        <rdf:type rdf:resource="&event;CompletedEvent"/>
+        <event:hasTimeMilli rdf:datatype="&xsd;integer">4786786</event:hasTimeMilli>
+        <event:precededBy rdf:resource="http://www.synthetic.com/model.rdf#ActivityEvent7"/>
+        <event:originatedFromActivityInstance rdf:resource="http://www.synthetic.com/model.rdf#ActivityInstance4"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#ActivityInstance1 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#ActivityInstance1">
+        <rdf:type rdf:resource="&event;ActivityInstance"/>
+        <event:definedByActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity1"/>
+        <event:partOfWorkflowInstance rdf:resource="http://www.synthetic.com/model.rdf#WorkflowInstance1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#ActivityInstance2 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#ActivityInstance2">
+        <rdf:type rdf:resource="&event;ActivityInstance"/>
+        <event:definedByActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity2"/>
+        <event:partOfWorkflowInstance rdf:resource="http://www.synthetic.com/model.rdf#WorkflowInstance1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#ActivityInstance3 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#ActivityInstance3">
+        <rdf:type rdf:resource="&event;ActivityInstance"/>
+        <event:definedByActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity3"/>
+        <event:partOfWorkflowInstance rdf:resource="http://www.synthetic.com/model.rdf#WorkflowInstance1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#ActivityInstance4 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#ActivityInstance4">
+        <rdf:type rdf:resource="&event;ActivityInstance"/>
+        <event:definedByActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity4"/>
+        <event:partOfWorkflowInstance rdf:resource="http://www.synthetic.com/model.rdf#WorkflowInstance1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#BusinessPartner1 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#BusinessPartner1">
+        <rdf:type rdf:resource="&businesspartner;Customer"/>
+        <rdf:type rdf:resource="&businesspartner;Person"/>
+        <businesspartner:hasFirstName rdf:datatype="&xsd;string">David</businesspartner:hasFirstName>
+        <businesspartner:hasLastName rdf:datatype="&xsd;string">Overfeld</businesspartner:hasLastName>
+        <businesspartner:hasEmailAddress rdf:datatype="&xsd;string">david.overfeld@uni-muenster.de</businesspartner:hasEmailAddress>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#EconomicObject1 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#EconomicObject1">
+        <rdf:type rdf:resource="&economicobject;Order"/>
+        <economicobject:hasOrderReferenceNumber rdf:datatype="&xsd;string">test123</economicobject:hasOrderReferenceNumber>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#Participant1 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#Participant1">
+        <rdf:type rdf:resource="&workflow;RoleParticipant"/>
+        <workflow:hasParticipantName rdf:datatype="&xsd;string">ServiceAgent</workflow:hasParticipantName>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#System1 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#System1">
+        <rdf:type rdf:resource="&system;WFMSystem"/>
+        <system:hasName rdf:datatype="&xsd;string">Synthetic1</system:hasName>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#Transition1 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#Transition1">
+        <rdf:type rdf:resource="&workflow;Transition"/>
+        <workflow:hasTransitionCondition rdf:datatype="&xsd;string">true</workflow:hasTransitionCondition>
+        <workflow:hasSourceActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity1"/>
+        <workflow:hasTargetActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#Transition2 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#Transition2">
+        <rdf:type rdf:resource="&workflow;Transition"/>
+        <workflow:hasTransitionCondition rdf:datatype="&xsd;string">true</workflow:hasTransitionCondition>
+        <workflow:hasSourceActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity2"/>
+        <workflow:hasTargetActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity3"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#Transition3 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#Transition3">
+        <rdf:type rdf:resource="&workflow;Transition"/>
+        <workflow:hasTransitionCondition rdf:datatype="&xsd;string">true</workflow:hasTransitionCondition>
+        <workflow:hasSourceActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity2"/>
+        <workflow:hasTargetActivity rdf:resource="http://www.synthetic.com/model.rdf#Activity4"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#Workflow1 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#Workflow1">
+        <rdf:type rdf:resource="&workflow;Workflow"/>
+        <workflow:hasWorkflowName>New Order</workflow:hasWorkflowName>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#WorkflowEvent1 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#WorkflowEvent1">
+        <rdf:type rdf:resource="&event;RunningEvent"/>
+        <event:hasTimeMilli rdf:datatype="&xsd;integer">1</event:hasTimeMilli>
+        <event:originatedFromActivityInstance rdf:resource="http://www.synthetic.com/model.rdf#ActivityInstance1"/>
+        <event:originatedFromWorkflowInstance rdf:resource="http://www.synthetic.com/model.rdf#WorkflowInstance1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#WorkflowEvent2 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#WorkflowEvent2">
+        <rdf:type rdf:resource="&event;CompletedEvent"/>
+        <event:hasTimeMilli rdf:datatype="&xsd;integer">200000</event:hasTimeMilli>
+        <event:originatedFromActivityInstance rdf:resource="http://www.synthetic.com/model.rdf#ActivityInstance1"/>
+        <event:precededBy rdf:resource="http://www.synthetic.com/model.rdf#WorkflowEvent1"/>
+        <event:originatedFromWorkflowInstance rdf:resource="http://www.synthetic.com/model.rdf#WorkflowInstance1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.synthetic.com/model.rdf#WorkflowInstance1 -->
+
+    <NamedIndividual rdf:about="http://www.synthetic.com/model.rdf#WorkflowInstance1">
+        <rdf:type rdf:resource="&event;WorkflowInstance"/>
+        <event:hasBusinessPartnerContext rdf:resource="http://www.synthetic.com/model.rdf#BusinessPartner1"/>
+        <event:hasBusinessPartnerContext rdf:resource="http://www.synthetic.com/model.rdf#EconomicObject1"/>
+        <event:generatedBySystem rdf:resource="http://www.synthetic.com/model.rdf#System1"/>
+        <event:definedByWorkflow rdf:resource="http://www.synthetic.com/model.rdf#Workflow1"/>
+    </NamedIndividual>
 </rdf:RDF>
 
 
