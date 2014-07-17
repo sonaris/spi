@@ -193,7 +193,7 @@
 
     <DatatypeProperty rdf:about="&event;hasTimeMilli">
         <rdfs:domain rdf:resource="&event;Event"/>
-        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:range rdf:resource="&xsd;long"/>
     </DatatypeProperty>
     
 
