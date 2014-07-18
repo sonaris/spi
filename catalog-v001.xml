@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1405452311757" name="http://dl.dropboxusercontent.com/u/983997/ontologies/system/system.owl" uri="system.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1405452311757" name="http://www.spi.com/user" uri="user.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1405452311757" name="duplicate:http://www.w3.org/2002/07/owl" uri="businesspartner.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1405452311757" name="duplicate:http://www.w3.org/2002/07/owl" uri="economicobject.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1405452311757" name="duplicate:http://www.w3.org/2002/07/owl" uri="event.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1405452311757" name="duplicate:http://www.w3.org/2002/07/owl" uri="workflow.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1405642110954" name="http://dl.dropboxusercontent.com/u/983997/ontologies/system/system.owl" uri="system.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1405642110954" name="http://www.spi.com/user" uri="user.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1405642110954" name="duplicate:http://www.w3.org/2002/07/owl" uri="businesspartner.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1405642110954" name="duplicate:http://www.w3.org/2002/07/owl" uri="economicobject.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1405642110954" name="duplicate:http://www.w3.org/2002/07/owl" uri="event.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1405642110954" name="duplicate:http://www.w3.org/2002/07/owl" uri="workflow.rdf"/>
     </group>
 </catalog>
