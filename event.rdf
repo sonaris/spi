@@ -137,6 +137,15 @@
     
 
 
+    <!-- http://www.spi.com/event.owl#producedByApplication -->
+
+    <ObjectProperty rdf:about="&event;producedByApplication">
+        <rdfs:domain rdf:resource="&event;Event"/>
+        <rdfs:range rdf:resource="&workflow;Application"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://www.spi.com/event.owl#producedByParticipant -->
 
     <ObjectProperty rdf:about="&event;producedByParticipant">

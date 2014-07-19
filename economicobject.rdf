@@ -30,6 +30,15 @@
     
 
 
+    <!-- http://www.spi.com/economicobject.owl#hasComplaintDescription -->
+
+    <DatatypeProperty rdf:about="http://www.spi.com/economicobject.owl#hasComplaintDescription">
+        <rdfs:domain rdf:resource="http://www.spi.com/economicobject.owl#Complaint"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
     <!-- http://www.spi.com/economicobject.owl#hasComplaintReferenceNumber -->
 
     <DatatypeProperty rdf:about="http://www.spi.com/economicobject.owl#hasComplaintReferenceNumber">
