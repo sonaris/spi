@@ -137,6 +137,15 @@
     
 
 
+    <!-- http://www.spi.com/event.owl#producedByAccount -->
+
+    <ObjectProperty rdf:about="&event;producedByAccount">
+        <rdfs:domain rdf:resource="&event;Event"/>
+        <rdfs:range rdf:resource="&system;Account"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://www.spi.com/event.owl#producedByApplication -->
 
     <ObjectProperty rdf:about="&event;producedByApplication">
@@ -381,6 +390,12 @@
     <!-- http://www.spi.com/event.owl#WorkflowInstance -->
 
     <Class rdf:about="&event;WorkflowInstance"/>
+    
+
+
+    <!-- http://www.spi.com/system.owl#EventGeneratingSystem -->
+
+    <Class rdf:about="&system;EventGeneratingSystem"/>
 </rdf:RDF>
 
 
