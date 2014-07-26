@@ -46,6 +46,15 @@
     
 
 
+    <!-- http://www.spi.com/event.owl#belongsToParticipant -->
+
+    <ObjectProperty rdf:about="&event;belongsToParticipant">
+        <rdfs:domain rdf:resource="&system;Account"/>
+        <rdfs:range rdf:resource="&workflow;Participant"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://www.spi.com/event.owl#causedBy -->
 
     <ObjectProperty rdf:about="&event;causedBy">
