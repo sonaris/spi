@@ -109,6 +109,14 @@
     
 
 
+    <!-- http://www.spi.com/event.owl#importedFromSystem -->
+
+    <ObjectProperty rdf:about="&event;importedFromSystem">
+        <rdfs:range rdf:resource="&system;System"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://www.spi.com/event.owl#originatedFromActivityInstance -->
 
     <ObjectProperty rdf:about="&event;originatedFromActivityInstance">
