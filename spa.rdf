@@ -16,9 +16,29 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://www.spi.com/spa.owl">
+        <owl:imports rdf:resource="http://www.spi.com/query.owl"/>
         <owl:imports rdf:resource="http://www.spi.com/system.owl"/>
-        <owl:imports rdf:resource="http://www.spi.com/user"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.spi.com/spa.owl#createdByAccount -->
+
+    <owl:ObjectProperty rdf:about="http://www.spi.com/spa.owl#createdByAccount">
+        <rdfs:domain rdf:resource="http://www.spi.com/query.owl#Query"/>
+        <rdfs:range rdf:resource="http://www.spi.com/system.owl#Account"/>
+    </owl:ObjectProperty>
 </rdf:RDF>
 
 
