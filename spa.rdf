@@ -11,14 +11,14 @@
 ]>
 
 
-<rdf:RDF xmlns="http://www.spi.com/spa.owl#"
-     xml:base="http://www.spi.com/spa.owl"
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	 xmlns:query="http://www.spi.com/query.owl#"
-     xmlns:system="http://www.spi.com/system.owl#"
+     xmlns:system="http://www.spi.com/system.owl#">
     <Ontology rdf:about="http://www.spi.com/spa.owl">
 		<rdfs:comment>An ontology for a semantic prototype</rdfs:comment>
 		<imports rdf:resource="https://raw.githubusercontent.com/sonaris/spi/master/query.rdf"/>
