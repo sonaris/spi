@@ -2,6 +2,8 @@
 
 
 <!DOCTYPE rdf:RDF [
+	<!ENTITY system "http://www.spi.com/system.owl#" >
+    <!ENTITY query "http://www.spi.com/query.owl#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
@@ -15,10 +17,13 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://www.spi.com/spa.owl">
-		<owl:imports rdf:resource="https://raw.githubusercontent.com/sonaris/spi/master/query.rdf"/>
-		<owl:imports rdf:resource="https://raw.githubusercontent.com/sonaris/spi/master/system.rdf"/>
-    </owl:Ontology>
+	 xmlns:query="http://www.spi.com/query.owl#"
+     xmlns:system="http://www.spi.com/system.owl#"
+    <Ontology rdf:about="http://www.spi.com/spa.owl">
+		<rdfs:comment>An ontology for a semantic prototype</rdfs:comment>
+		<imports rdf:resource="https://raw.githubusercontent.com/sonaris/spi/master/query.rdf"/>
+		<imports rdf:resource="https://raw.githubusercontent.com/sonaris/spi/master/system.rdf"/>
+    </Ontology>
     
 
 
@@ -35,10 +40,10 @@
 
     <!-- http://www.spi.com/spa.owl#createdByAccount -->
 
-    <owl:ObjectProperty rdf:about="http://www.spi.com/spa.owl#createdByAccount">
+    <ObjectProperty rdf:about="http://www.spi.com/spa.owl#createdByAccount">
         <rdfs:domain rdf:resource="http://www.spi.com/query.owl#Query"/>
         <rdfs:range rdf:resource="http://www.spi.com/system.owl#Account"/>
-    </owl:ObjectProperty>
+    </ObjectProperty>
 </rdf:RDF>
 
 
