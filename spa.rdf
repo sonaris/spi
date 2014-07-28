@@ -16,8 +16,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://www.spi.com/spa.owl">
-		<imports rdf:resource="https://raw.githubusercontent.com/sonaris/spi/master/query.rdf"/>
-		<imports rdf:resource="https://raw.githubusercontent.com/sonaris/spi/master/system.rdf"/>
+		<owl:imports rdf:resource="https://raw.githubusercontent.com/sonaris/spi/master/query.rdf"/>
+		<owl:imports rdf:resource="https://raw.githubusercontent.com/sonaris/spi/master/system.rdf"/>
     </owl:Ontology>
     
 
