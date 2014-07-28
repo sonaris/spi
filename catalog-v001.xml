@@ -4,12 +4,12 @@
     <uri id="Imports Wizard Entry" name="http://www.spi.com/user" uri="https://raw.githubusercontent.com/sonaris/spi/master/user.rdf"/>
     <uri id="Imports Wizard Entry" name="http://www.spi.com/system.owl" uri="https://raw.githubusercontent.com/sonaris/spi/master/system.rdf"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1406481437468" name="http://dl.dropboxusercontent.com/u/983997/ontologies/system/system.owl" uri="system.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1406481437468" name="http://www.spi.com/spa.owl" uri="spa.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1406481437468" name="http://www.spi.com/user" uri="query.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1406481437468" name="duplicate:http://www.w3.org/2002/07/owl" uri="businesspartner.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1406481437468" name="duplicate:http://www.w3.org/2002/07/owl" uri="economicobject.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1406481437468" name="duplicate:http://www.w3.org/2002/07/owl" uri="event.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1406481437468" name="duplicate:http://www.w3.org/2002/07/owl" uri="workflow.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1406563757671" name="http://dl.dropboxusercontent.com/u/983997/ontologies/system/system.owl" uri="system.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1406563757671" name="http://www.spi.com/spa.owl" uri="spa.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1406563757671" name="http://www.spi.com/user" uri="query.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1406563757671" name="duplicate:http://www.w3.org/2002/07/owl" uri="businesspartner.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1406563757671" name="duplicate:http://www.w3.org/2002/07/owl" uri="economicobject.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1406563757671" name="duplicate:http://www.w3.org/2002/07/owl" uri="event.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1406563757671" name="duplicate:http://www.w3.org/2002/07/owl" uri="workflow.rdf"/>
     </group>
 </catalog>
