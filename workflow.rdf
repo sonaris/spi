@@ -32,11 +32,35 @@
     
 
 
+    <!-- http://www.spi.com/workflow.owl#definedInActivitySet -->
+
+    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#definedInActivitySet">
+        <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#ActivitySet"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://www.spi.com/workflow.owl#definedInPackage -->
 
     <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#definedInPackage">
         <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Package"/>
-        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#definedInWorkflow -->
+
+    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#definedInWorkflow">
+        <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#hasApplicationPerformer -->
+
+    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#hasApplicationPerformer">
+        <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
     </ObjectProperty>
     
 
@@ -64,6 +88,15 @@
     <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#hasOutgoingTransition">
         <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#SplitControlFlow"/>
         <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#hasParticipantPerformer -->
+
+    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#hasParticipantPerformer">
+        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#NoneImplementationActivity"/>
+        <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
     </ObjectProperty>
     
 
@@ -104,27 +137,9 @@
     
 
 
-    <!-- http://www.spi.com/workflow.owl#performedByApplication -->
+    <!-- http://www.spi.com/workflow.owl#precededByActivity -->
 
-    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#performedByApplication">
-        <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Application"/>
-        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
-    </ObjectProperty>
-    
-
-
-    <!-- http://www.spi.com/workflow.owl#performedByParticipant -->
-
-    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#performedByParticipant">
-        <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#NoneImplementationActivity"/>
-        <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
-    </ObjectProperty>
-    
-
-
-    <!-- http://www.spi.com/workflow.owl#precededBy -->
-
-    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#precededBy">
+    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#precededByActivity">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
         <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
@@ -132,13 +147,13 @@
     
 
 
-    <!-- http://www.spi.com/workflow.owl#succeededBy -->
+    <!-- http://www.spi.com/workflow.owl#succeededByActivity -->
 
-    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#succeededBy">
+    <ObjectProperty rdf:about="http://www.spi.com/workflow.owl#succeededByActivity">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
         <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
-        <inverseOf rdf:resource="http://www.spi.com/workflow.owl#precededBy"/>
+        <inverseOf rdf:resource="http://www.spi.com/workflow.owl#precededByActivity"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </ObjectProperty>
     
@@ -261,6 +276,12 @@
     
 
 
+    <!-- http://www.spi.com/workflow.owl#ActivitySet -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#ActivitySet"/>
+    
+
+
     <!-- http://www.spi.com/workflow.owl#Application -->
 
     <Class rdf:about="http://www.spi.com/workflow.owl#Application"/>
@@ -271,6 +292,15 @@
 
     <Class rdf:about="http://www.spi.com/workflow.owl#ApplicationImplementationActivity">
         <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ImplementationActivity"/>
+    </Class>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#BlockActivity -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#BlockActivity">
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+        <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ActivitySet"/>
     </Class>
     
 
