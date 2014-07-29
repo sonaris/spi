@@ -1,4 +1,6 @@
 var queryTable;
+var availableQueries;
+var selectedQuery;
 
 $(document).ready(function() {
     queryTable = $('#sparqlResult').dataTable();
@@ -35,10 +37,44 @@ function showQueryResult(query)
     });
 }
 
+function getQueryURI (name)
+{
+    var uri = "";
+    $.each(availableQueries, function(i, query) {
+        if (query.name == name)
+        {
+            uri = query.query;
+        }
+    });
+    return uri;
+}
+
+function deleteQuery()
+{
+    if (selectedQuery != null && selectedQuery != '')
+    {
+        var query = getQueryURI (selectedQuery);
+
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "/deleteQuery",
+            data: 'queryURI=' +query,
+            async: false,
+            success: function(data) {
+                $.notify("Query Successfully Deleted", { className: 'success', position: 'bottom right' });
+            },
+            error: function(data) {
+                $.notify("A Problem Occured During Deletion", { className: 'error', position: 'bottom right' });
+            }
+        });
+     }
+}
+
 function saveQuery()
 {
     var data = {};
-    data.query = editor.getValue();
+    data.query = urlencode(editor.getValue());
     data.name = $("#queryName").val();
 
     $.ajax({
@@ -67,11 +103,18 @@ function getQueries()
         type: "POST",
         dataType: "json",
         url: "/getQueries",
-        data: data,
+        data: 'query=' + urlencode(config_prefixes + config_queries_getSavedQueries),
         async: false,
         success: function(result) {
 
         var data = generateTableData(result);
+        //remove URL encoding
+        $.each(data, function(i, entry) {
+            entry.content = urldecode(entry.content);
+        });
+
+        availableQueries = data;
+
                             var source =
                             {
                                 datatype: "json",
@@ -90,6 +133,7 @@ function getQueries()
                                     var item = event.args.item;
                                     if (item) {
                                         $("#queryPreview").val(item.value);
+                                        selectedQuery = item.label;
                                     }
                                 }
                             });

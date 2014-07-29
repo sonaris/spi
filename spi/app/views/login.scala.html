@@ -1,3 +1,5 @@
+@(message: String)
+
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -86,10 +88,10 @@
 
 <div class="container">
 
-    <form class="form-signin" role="form">
+    <form class="form-signin" role="form" action="@routes.Navigation.verifyLogin()" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="email" class="form-control" placeholder="Email address" required autofocus>
-        <input type="password" class="form-control" placeholder="Password" required>
+        <input id="email" name="email" type="email" class="form-control" placeholder="Email address" required autofocus>
+        <input id="password" name="password" type="password" class="form-control" placeholder="Password" required>
         <div class="checkbox">
             <label>
                 <input type="checkbox" value="remember-me"> Remember me

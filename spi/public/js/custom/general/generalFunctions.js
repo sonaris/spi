@@ -51,6 +51,23 @@ function generateTableData(result)
     return data;
 }
 
+function executeQueryAction(query, f)
+ {
+     $.ajax({
+             type: "POST",
+             dataType: "json",
+             url: config_endpoint,
+             data: 'query=' + urlencode(config_prefixes + query),
+             success: function(data) {
+                 f(data);
+             },
+             error: function(data) {
+                 alert("Error: " + data.statusText);
+                 return [];
+             }
+     });
+ }
+
 function urlencode(str) {
   //       discuss at: http://phpjs.org/functions/urlencode/
   //      original by: Philip Peterson
@@ -90,6 +107,45 @@ function urlencode(str) {
   replace(/\)/g, '%29')
     .replace(/\*/g, '%2A')
     .replace(/%20/g, '+');
+}
+
+function urldecode(str) {
+  //       discuss at: http://phpjs.org/functions/urldecode/
+  //      original by: Philip Peterson
+  //      improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+  //      improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+  //      improved by: Brett Zamir (http://brett-zamir.me)
+  //      improved by: Lars Fischer
+  //      improved by: Orlando
+  //      improved by: Brett Zamir (http://brett-zamir.me)
+  //      improved by: Brett Zamir (http://brett-zamir.me)
+  //         input by: AJ
+  //         input by: travc
+  //         input by: Brett Zamir (http://brett-zamir.me)
+  //         input by: Ratheous
+  //         input by: e-mike
+  //         input by: lovio
+  //      bugfixed by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+  //      bugfixed by: Rob
+  // reimplemented by: Brett Zamir (http://brett-zamir.me)
+  //             note: info on what encoding functions to use from: http://xkr.us/articles/javascript/encode-compare/
+  //             note: Please be aware that this function expects to decode from UTF-8 encoded strings, as found on
+  //             note: pages served as UTF-8
+  //        example 1: urldecode('Kevin+van+Zonneveld%21');
+  //        returns 1: 'Kevin van Zonneveld!'
+  //        example 2: urldecode('http%3A%2F%2Fkevin.vanzonneveld.net%2F');
+  //        returns 2: 'http://kevin.vanzonneveld.net/'
+  //        example 3: urldecode('http%3A%2F%2Fwww.google.nl%2Fsearch%3Fq%3Dphp.js%26ie%3Dutf-8%26oe%3Dutf-8%26aq%3Dt%26rls%3Dcom.ubuntu%3Aen-US%3Aunofficial%26client%3Dfirefox-a');
+  //        returns 3: 'http://www.google.nl/search?q=php.js&ie=utf-8&oe=utf-8&aq=t&rls=com.ubuntu:en-US:unofficial&client=firefox-a'
+  //        example 4: urldecode('%E5%A5%BD%3_4');
+  //        returns 4: '\u597d%3_4'
+
+  return decodeURIComponent((str + '')
+    .replace(/%(?![\da-f]{2})/gi, function() {
+      // PHP tolerates poorly formed escape sequences
+      return '%25';
+    })
+    .replace(/\+/g, '%20'));
 }
 
 function datediff(fromDate, toDate, interval) {
@@ -176,4 +232,99 @@ function sortChartData(unsortedData)
     sortedData.unshift(unsortedData[0]);
 
     return sortedData;
+}
+
+function generateSource(data, column)
+{
+    var source = [];
+    source.push("all");
+    $.each(data.results.bindings, function(i, binding) {
+
+        for (var key in binding) {
+            if (key === column)
+                source.push(binding[key].value);
+        }
+    });
+
+    return source;
+}
+
+function truncateDecimals(number) {
+    number = number * 100;
+    number_floor = Math[number < 0 ? 'ceil' : 'floor'](number);
+    return number_floor / 100;
+}
+;
+
+function convertMilli(number, format)
+{
+    try
+    {
+        if (format === "Seconds") return (number / 1000);
+        else if (format === "Minutes") return (number / 1000) / 60;
+        else if (format === "Hours") return ((number / 1000) / 60) / 60;
+        else if (format === "Days") return (((number / 1000) / 60) / 60) / 24;
+    }
+    catch (e)
+    {
+        return "Not available";
+    }
+}
+
+function updateColumnHeaders(tColumns)
+{
+    var header = '';
+
+    $.each(tColumns, function(index, value) {
+        header += '<th>' + value.data + '</th>';
+    });
+
+    $("#detailsResult tr").replaceWith("<tr>" + header + "</tr>");
+}
+
+function generateFilterSource(data, params)
+{
+    var source = [];
+
+    $.each(data, function(i, row) {
+        var name = row[params.displayMember].value;
+        var uri = row[params.valueMember].value;
+
+        var valid = true
+        $.each(params.filter, function(i, filter) {
+            var value1 = row[filter.key].value;
+            var value2 = filter.value;
+            if (value2 != 'all' && value1 != value2) valid = false;
+        });
+
+        if (valid === true)
+        {
+            var entry = {'name':name, 'uri':uri};
+
+            var found = false;
+            for(var i = 0; i < source.length; i++) {
+                if (source[i].name == name && source[i].uri == uri) {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) source.push({'name':name, 'uri':uri});
+        }
+    });
+
+    if (source.length > 1) source.unshift({'name':'all', 'uri':'all'});
+
+    var jqWidgetSource =
+        {
+             datatype: "json",
+             datafields: [
+              { name: 'name' },
+              { name: 'uri' }
+             ],
+             localdata: source
+        };
+    var dataAdapter = new $.jqx.dataAdapter(jqWidgetSource);
+
+    return dataAdapter;
 }

@@ -22,10 +22,10 @@ gscript.addEventListener("load",
 
 function generateStatistics()
 {
-    getResult(config_queries_AllSystemNames, "S");
+    getResult(config_queries_summary);
 }
 
-function getResult(query, type)
+function getResult(query)
 {
     $.ajax({
         type: "POST",
@@ -34,49 +34,7 @@ function getResult(query, type)
         data: 'query=' + urlencode(config_prefixes + query),
         async: false,
         success: function(data) {
-            if (type === "S")
-            {
-                systemData = data;
-                //Start next Query
-                getResult(config_queries_workflowsPerSystem, "WPS");
-            }
-            else if (type === "WPS")
-            {
-                workflowData = data;
-                //Start next Query
-                getResult(config_queries_workflowInstancesPerSystem, "WIPS");
-            }
-            else if (type === "WIPS")
-            {
-                workflowInstanceData = data;
-                //Start next Query
-                getResult(config_queries_activitiesPerSystem, "APS");
-            }
-            else if (type === "APS")
-            {
-                activityData = data;
-                //Start next Query
-                getResult(config_queries_participantsPerSystem, "P");
-            }
-            else if (type === "P")
-            {
-                participantData = data;
-                //Start next Query
-                getResult(config_queries_activityInstancesPerSystem, "AIPS");
-            }
-            else if (type === "AIPS")
-            {
-                activityInstanceData = data;
-                //Start next Query
-                getResult(config_queries_eventsPerSystem, "EPS");
-            }
-            else if (type === "EPS")
-            {
-                eventData = data;
-                createChart();
-            }
-
-
+            createChart(data);
         },
         error: function(data) {
             alert("Error: " + data.statusText);
@@ -85,36 +43,47 @@ function getResult(query, type)
     });
 }
 
-function createChart()
+function createChart(data)
 {
-    var header = ['Element'];
-    var workflows = ['Workflows'];
-    var activities = ['Activities'];
-    var participants = ['Participants'];
-    var activityInstances = ['Activity Instances'];
-    var workflowInstances = ['Workflow Instances'];
-    var events = ['Events'];
+    var systems = ['System'];
 
-    header = header.concat(generateSystemsSource(systemData, "sName"));
-    workflows = workflows.concat(generateNumbersSource(workflowData, "number"));
-    workflowInstances = workflowInstances.concat(generateNumbersSource(workflowInstanceData, "number"));
-    activities = activities.concat(generateNumbersSource(activityData, "number"));
-    participants = participants.concat(generateNumbersSource(participantData, "number"));
-    activityInstances = activityInstances.concat(generateNumbersSource(activityInstanceData, "number"));
-    events = events.concat(generateNumbersSource(eventData, "number"));
+    var summaries = {};
+    var headers = [];
 
-    var data = google.visualization.arrayToDataTable([
-        header,
-        workflows,
-        workflowInstances,
-        activities,
-        participants,
-        activityInstances,
-        events
-    ]);
+    //prepare summary arrays
+    $.each(data.head.vars, function(i, entry) {
+        if (entry != 'sName')
+        {
+            summaries[entry] = [entry];
+            headers.push(entry);
+        }
+    });
+
+    //iterate through each system summary to fill arrays
+    $.each(data.results.bindings, function(i, entry) {
+        //add new system first
+        systems.push(entry['sName'].value);
+        //retrieve all summary values and add to respective arrays
+        $.each(headers, function(i, header) {
+            var value = parseInt(entry[header].value);
+            summaries[header].push(value);
+
+        });
+    });
+
+    //create data array
+
+    var dataArray = [];
+    dataArray.push(systems);
+
+    $.each(summaries, function(i, array) {
+            dataArray.push(array);
+    });
+
+    var data = google.visualization.arrayToDataTable(dataArray);
 
     var options = {
-        height: 500,
+        height: 600,
         legend: {position: 'top', maxLines: 3},
         bar: {groupWidth: '75%'},
         isStacked: false,

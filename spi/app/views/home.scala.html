@@ -5,6 +5,7 @@
 <script type="text/javascript">
     $("#home").addClass('active');
     $("#data").removeClass('active');
+    $("#export").removeClass('active');
     $("#statistics").removeClass('active');
     $("#summary").removeClass('active');
     $("#customsparql").removeClass('active');
@@ -13,30 +14,45 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
     <div class="container">
-        <h1>SPI - Semantic Process Intelligence</h1>
-        <p>A prototype demonstrating the potentials of ontologies in the context of business process intelligence. Hello @{val name = message; name}!</p>
-
+        <h1>SPA - Semantic Process Analyzer</h1>
+        <p>A prototype demonstrating the potentials of ontologies in the context of business process intelligence.<br/> Hello <b>@{val name = message; name}</b>!</p>
     </div>
 </div>
 
 <div class="container">
     <!-- Example row of columns -->
     <div class="row">
-        <div class="col-md-4">
-            <a href="summary"><img width="300" height="200" src="@routes.Assets.at("images/summary.PNG")" alt="..."></a>
+        <div class="col-md-3">
+            <a href="data"><img width="250" height="150" src="@routes.Assets.at("images/import.PNG")" alt="..."></a>
+            <h2>Import</h2>
+            <p>Import event data from different sources</p>
+        </div>
+        <div class="col-md-3">
+            <a href="export"><img width="250" height="150" src="@routes.Assets.at("images/export.PNG")" alt="..."></a>
+            <h2>Export</h2>
+            <p>Export the event in different serialization formats </p>
+        </div>
+        <div class="col-md-3">
+            <a href="summary"><img width="250" height="150" src="@routes.Assets.at("images/summary.PNG")" alt="..."></a>
             <h2>Summary</h2>
             <p>Get an overview about the data basis</p>
         </div>
-        <div class="col-md-4">
-            <a href="statistics"><img width="300" height="200" src="@routes.Assets.at("images/statistics.PNG")" alt="..."></a>
+        <div class="col-md-3">
+            <a href="statistics_quality"><img width="250" height="150" src="@routes.Assets.at("images/statistics.PNG")" alt="..."></a>
             <h2>Statistics</h2>
             <p>Get detailed insight into the performce of the workflows and activities </p>
         </div>
-        <div class="col-md-4">
-            <a href="query"><img width="300" height="200" src="@routes.Assets.at("images/customquery.PNG")" alt="..."></a>
-            <h2>Custom SPARQL Query</h2>
+        <div class="col-md-3">
+            <a href="query"><img width="250" height="150" src="@routes.Assets.at("images/customquery.PNG")" alt="..."></a>
+            <h2>SPARQL Query</h2>
             <p>Create, execute and save custom SPARQL queries</p>
         </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <p class="text-muted">&copy; 2014 Stevens Institute of Technology</p>
     </div>
 </div>
 

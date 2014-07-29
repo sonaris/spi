@@ -5,6 +5,7 @@
 <script type="text/javascript">
     $("#home").removeClass('active');
     $("#data").removeClass('active');
+    $("#export").removeClass('active');
     $("#statistics").removeClass('active');
     $("#summary").removeClass('active');
     $("#customsparql").addClass('active');
@@ -104,8 +105,8 @@ WHERE {
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-default" onclick="insertQuery()" data-dismiss="modal">Insert Query</button>
+                <button type="button" class="btn btn-danger" onclick="deleteQuery()">Delete Query</button>
+                <button type="button" class="btn btn-primary" onclick="insertQuery()" data-dismiss="modal">Insert Query</button>
             </div>
         </div>
     </div>

@@ -9,7 +9,7 @@ function getExport()
         success: function(data) {
             document.getElementById("output").value = data;
 
-            $(".alert").alert();
+            $.notify("Export created", { className: 'success', position: 'bottom right' });
         },
         error: function(data) {
             alert("Error: " + data.statusText);

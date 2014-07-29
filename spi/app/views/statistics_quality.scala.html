@@ -1,0 +1,35 @@
+@(message: String)
+
+@base("empty") {
+
+<script type="text/javascript">
+    $("#home").removeClass('active');
+    $("#data").removeClass('active');
+    $("#export").removeClass('active');
+    $("#statistics").addClass('active');
+    $("#summary").removeClass('active');
+    $("#customsparql").removeClass('active');
+</script>
+
+<div class="page-header">
+    <h1>Quality </h1>
+</div>
+
+<div class="bs-example bs-example-tabs">
+    <ul id="myTab" class="nav nav-tabs">
+        <li class="active"><a href="#openedclosed" data-toggle="tab">Opened vs. Completed Workflow Instances</a></li>
+
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="openedclosed">
+            <br/>
+            <div id="qualityCharts">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="@routes.Assets.at("js/custom/statistics/statistics_quality.js")"></script>
+}
