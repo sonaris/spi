@@ -215,6 +215,38 @@
     
 
 
+    <!-- http://www.spi.com/economicobject.owl#hasComplaintReferenceNumber -->
+
+    <rdf:Description rdf:about="&economicobject;hasComplaintReferenceNumber">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.spi.com/economicobject.owl#hasContractReferenceNumber -->
+
+    <rdf:Description rdf:about="&economicobject;hasContractReferenceNumber">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.spi.com/economicobject.owl#hasInvoiceReferenceNumber -->
+
+    <rdf:Description rdf:about="&economicobject;hasInvoiceReferenceNumber">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.spi.com/economicobject.owl#hasOrderReferenceNumber -->
+
+    <rdf:Description rdf:about="&economicobject;hasOrderReferenceNumber">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    </rdf:Description>
+    
+
+
     <!-- http://www.spi.com/event.owl#hasDescription -->
 
     <DatatypeProperty rdf:about="&event;hasDescription">
