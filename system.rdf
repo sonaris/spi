@@ -59,6 +59,15 @@
     
 
 
+    <!-- http://www.spi.com/system.owl#hasAccountRole -->
+
+    <owl:DatatypeProperty rdf:about="http://www.spi.com/system.owl#hasAccountRole">
+        <rdfs:domain rdf:resource="http://www.spi.com/system.owl#Account"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.spi.com/system.owl#hasAccountUserName -->
 
     <owl:DatatypeProperty rdf:about="http://www.spi.com/system.owl#hasAccountUserName">
