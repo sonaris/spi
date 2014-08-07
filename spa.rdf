@@ -63,7 +63,6 @@
     <DatatypeProperty rdf:about="http://www.spi.com/spa.owl#hasAccountName">
         <rdfs:domain rdf:resource="&system;Account"/>
         <rdfs:range rdf:resource="&xsd;string"/>
-        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </DatatypeProperty>
 </rdf:RDF>
 
