@@ -44,26 +44,6 @@
         <rdfs:domain rdf:resource="&query;Query"/>
         <rdfs:range rdf:resource="&system;Account"/>
     </ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.spi.com/spa.owl#hasAccountName -->
-
-    <DatatypeProperty rdf:about="http://www.spi.com/spa.owl#hasAccountName">
-        <rdfs:domain rdf:resource="&system;Account"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </DatatypeProperty>
 </rdf:RDF>
 
 
