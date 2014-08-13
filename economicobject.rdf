@@ -90,6 +90,9 @@
 
     <Class rdf:about="http://www.spi.com/economicobject.owl#Complaint">
         <rdfs:subClassOf rdf:resource="http://www.spi.com/economicobject.owl#EconomicObject"/>
+        <hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.spi.com/economicobject.owl#hasComplaintReferenceNumber"/>
+        </hasKey>
     </Class>
     
 
@@ -98,6 +101,9 @@
 
     <Class rdf:about="http://www.spi.com/economicobject.owl#Contract">
         <rdfs:subClassOf rdf:resource="http://www.spi.com/economicobject.owl#EconomicObject"/>
+        <hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.spi.com/economicobject.owl#hasContractReferenceNumber"/>
+        </hasKey>
     </Class>
     
 
@@ -112,6 +118,9 @@
 
     <Class rdf:about="http://www.spi.com/economicobject.owl#Invoice">
         <rdfs:subClassOf rdf:resource="http://www.spi.com/economicobject.owl#EconomicObject"/>
+        <hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.spi.com/economicobject.owl#hasInvoiceReferenceNumber"/>
+        </hasKey>
     </Class>
     
 
@@ -120,6 +129,9 @@
 
     <Class rdf:about="http://www.spi.com/economicobject.owl#Order">
         <rdfs:subClassOf rdf:resource="http://www.spi.com/economicobject.owl#EconomicObject"/>
+        <hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.spi.com/economicobject.owl#hasOrderReferenceNumber"/>
+        </hasKey>
     </Class>
 </rdf:RDF>
 

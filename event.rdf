@@ -86,7 +86,7 @@
 
     <ObjectProperty rdf:about="&event;generatedBySystem">
         <rdfs:domain rdf:resource="&event;WorkflowInstance"/>
-        <rdfs:range rdf:resource="&system;EventGeneratingSystem"/>
+        <rdfs:range rdf:resource="&system;System"/>
     </ObjectProperty>
     
 
@@ -253,16 +253,6 @@
     
 
 
-    <!-- http://www.spi.com/economicobject.owl#Order -->
-
-    <rdf:Description rdf:about="&economicobject;Order">
-        <hasKey rdf:parseType="Collection">
-            <rdf:Description rdf:about="&economicobject;hasOrderReferenceNumber"/>
-        </hasKey>
-    </rdf:Description>
-    
-
-
     <!-- http://www.spi.com/event.owl#AbortedEvent -->
 
     <Class rdf:about="&event;AbortedEvent">
@@ -417,12 +407,6 @@
     <!-- http://www.spi.com/event.owl#WorkflowInstance -->
 
     <Class rdf:about="&event;WorkflowInstance"/>
-    
-
-
-    <!-- http://www.spi.com/system.owl#EventGeneratingSystem -->
-
-    <Class rdf:about="&system;EventGeneratingSystem"/>
 </rdf:RDF>
 
 

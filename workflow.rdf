@@ -357,6 +357,19 @@
     
 
 
+    <!-- http://www.spi.com/workflow.owl#PackageElement -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#PackageElement">
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.spi.com/workflow.owl#definedInPackage"/>
+                <someValuesFrom rdf:resource="http://www.spi.com/workflow.owl#Package"/>
+            </Restriction>
+        </equivalentClass>
+    </Class>
+    
+
+
     <!-- http://www.spi.com/workflow.owl#Participant -->
 
     <Class rdf:about="http://www.spi.com/workflow.owl#Participant"/>
@@ -428,6 +441,19 @@
     <!-- http://www.spi.com/workflow.owl#Workflow -->
 
     <Class rdf:about="http://www.spi.com/workflow.owl#Workflow"/>
+    
+
+
+    <!-- http://www.spi.com/workflow.owl#WorkflowElement -->
+
+    <Class rdf:about="http://www.spi.com/workflow.owl#WorkflowElement">
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.spi.com/workflow.owl#definedInWorkflow"/>
+                <someValuesFrom rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+            </Restriction>
+        </equivalentClass>
+    </Class>
 </rdf:RDF>
 
 
