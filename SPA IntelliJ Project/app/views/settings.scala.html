@@ -1,0 +1,80 @@
+@(
+eventOntFile: String,
+spaOntFile: String,
+eventOntNS: String,
+workflowOntNS: String,
+systemOntNS: String,
+businessPartnerOntNS: String,
+economicObjectOntNS: String,
+queryOntNS: String,
+spaOntNS: String,
+message: String
+)
+
+@base("empty") {
+
+<script type="text/javascript">
+    $("#home").removeClass('active');
+    $("#data").removeClass('active');
+    $("#export").removeClass('active');
+    $("#statistics").removeClass('active');
+    $("#summary").removeClass('active');
+    $("#customsparql").removeClass('active');
+
+    var message = '@Html(message)';
+
+    //alert(message);
+    if (message != null && message != '')
+    {
+        if (message == 'success') $.notify("Settings Successfully Saved", { className: 'success', position: 'bottom right' });
+        else if (message != 'empty') $.notify(message, { className: 'error', position: 'bottom right' });
+    }
+</script>
+
+<div class="page-header">
+    <h1>Settings </h1>
+</div>
+
+<div  class="panel panel-default">
+    <div class="panel-heading">Ontology Files and Namespaces</div>
+    <div class="panel-body">
+        <form role="form" action="@routes.Application.saveSettings()" method="post">
+
+            <div style="width:50%; float:left" class="form-group">
+                <h3>Event Creation </h3>
+                <label class="control-label" for="eventOnt">Event Ontology File</label>
+                <input id="eventOnt" name="eventOnt" type="text" placeholder="" class="form-control input-md" required="" value="@Html(eventOntFile)">
+                <br />
+                <label class="control-label" for="eventOntURI">Event Ontology URI</label>
+                <input id="eventOntURI" name="eventOntURI" type="text" placeholder="" class="form-control input-md" required="" value="@Html(eventOntNS)">
+                <br />
+                <label class="control-label" for="workflowOntURI">Workflow Ontology URI</label>
+                <input id="workflowOntURI" name="workflowOntURI" type="text" placeholder="" class="form-control input-md" required="" value="@Html(workflowOntNS)">
+                <br />
+                <label class="control-label" for="systemOntURI">System Ontology URI</label>
+                <input id="systemOntURI" name="systemOntURI" type="text" placeholder="" class="form-control input-md" required="" value="@Html(systemOntNS)">
+                <br />
+                <label class="control-label" for="businessPartnerOntURI">Business Partner Ontology URI</label>
+                <input id="businessPartnerOntURI" name="businessPartnerOntURI" type="text" placeholder="" class="form-control input-md" required="" value="@Html(businessPartnerOntNS)">
+                <br />
+                <label class="control-label" for="economicObjectOntURI">Economic Object Ontology URI</label>
+                <input id="economicObjectOntURI" name="economicObjectOntURI" type="text" placeholder="" class="form-control input-md" required="" value="@Html(economicObjectOntNS)">
+                <br />
+                <h3>Application Specific (Internal) </h3>
+                <label class="control-label" for="spaOnt">Semantic Process Analyzer Ontology File</label>
+                <input id="spaOnt" name="spaOnt" type="text" placeholder="" class="form-control input-md" required="" value="@Html(spaOntFile)">
+                <br />
+                <label class="control-label" for="spaOntURI">Semantic Process Analyzer Ontology URI</label>
+                <input id="spaOntURI" name="spaOntURI" type="text" placeholder="" class="form-control input-md" required="" value="@Html(spaOntNS)">
+                <br />
+                <label class="control-label" for="queryOntURI">Query Ontology URI</label>
+                <input id="queryOntURI" name="queryOntURI" type="text" placeholder="" class="form-control input-md" required="" value="@Html(queryOntNS)">
+                <br />
+
+                <button type="submit" name="import" class="btn btn-primary">Save Settings</button>
+            </div>
+            <div style="float:right"><img width="128" height="128" src="@routes.Assets.at("images/settings1.PNG")" alt="..."></div>
+        </form>
+    </div>
+</div>
+}

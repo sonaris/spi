@@ -1,0 +1,34 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET     /                           controllers.Navigation.home()
+GET     /home                       controllers.Navigation.home()
+GET     /data                       controllers.Navigation.data()
+GET     /export                     controllers.Navigation.export()
+GET     /summary                    controllers.Navigation.summary()
+GET     /statistics_quality         controllers.Navigation.statistics_quality()
+GET     /statistics_time            controllers.Navigation.statistics_time()
+GET     /statistics_controlflow     controllers.Navigation.statistics_controlflow()
+GET     /query                      controllers.Navigation.query()
+GET     /login                      controllers.Navigation.login()
+GET     /settings                   controllers.Navigation.settings()
+POST    /logout                     controllers.Navigation.logout()
+POST    /verifyLogin                controllers.Navigation.verifyLogin()
+
+POST     /importRDF                 controllers.Application.importRDF()
+POST     /importSynthetic           controllers.Application.importSynthetic()
+POST     /importStardust            controllers.Application.importStardust()
+POST     /importCamunda             controllers.Application.importCamunda()
+POST     /emptyTripleStore          controllers.Application.emptyTripleStore()
+POST     /reasonOverTripleStore     controllers.Application.reasonOverTripleStore()
+POST     /getQueryResult            controllers.Application.getQueryResult()
+POST     /getExport                 controllers.Application.serializeData()
+POST     /saveQuery                 controllers.Application.saveQuery()
+POST     /deleteQuery               controllers.Application.deleteQuery()
+POST     /getQueries                controllers.Application.getQueries()
+POST     /saveSettings              controllers.Application.saveSettings()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /webjars/*file              controllers.WebJarAssets.at(file)

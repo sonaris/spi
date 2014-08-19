@@ -1,0 +1,27 @@
+@(message: String)
+
+@base("empty") {
+
+<script type="text/javascript">
+    $("#home").removeClass('active');
+    $("#data").removeClass('active');
+    $("#export").removeClass('active');
+    $("#statistics").removeClass('active');
+    $("#summary").addClass('active');
+    $("#customsparql").removeClass('active');
+</script>
+
+<div class="page-header">
+        <h1>Summary </h1>
+</div>
+
+<div  class="panel panel-default">
+    <div class="panel-heading">Elements per System</div>
+    <div class="panel-body">
+        <div id="stackedChart" style="float: left; width: 100%"></div>
+    </div>
+</div>
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="@routes.Assets.at("js/custom/summary/summary.js")"></script>
+}
