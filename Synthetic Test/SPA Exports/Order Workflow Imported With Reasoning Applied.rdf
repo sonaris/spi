@@ -1,0 +1,2090 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.spi.com/businesspartner.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.1="http://www.spi.com/economicobject.owl#"
+    xmlns:j.2="http://www.spi.com/event.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.3="http://www.spi.com/system.owl#"
+    xmlns:j.4="http://www.spi.com/workflow.owl#" > 
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#succeededBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:range rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <owl:inverseOf rdf:resource="http://www.spi.com/event.owl#precededBy"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#succeededBy"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#succeededBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityInstance2">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:definedByActivity rdf:resource="http://www.order.com/model.rdf#Activity2"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance1"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityInstance2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#hasMember">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#Organization"/>
+    <rdfs:range rdf:resource="http://www.spi.com/businesspartner.owl#Person"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasMember"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/businesspartner.owl#hasMember"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#ControlFlow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ControlFlow"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#ControlFlow"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Application6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Application6"/>
+    <j.4:hasApplicationName>FileOrderApp</j.4:hasApplicationName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#ImplementationActivity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ImplementationActivity"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#ImplementationActivity"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Nothing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#RoleParticipant"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#NoneImplementationActivity"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#WorkflowInstance"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Person"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Customer"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/system.owl#EventGeneratingSystem"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/economicobject.owl#EconomicObject"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#AbortedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#CancelledEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#AssignedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#NotRunningEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#FailedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#InitialEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#ReadyEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#SuccessEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#SuspendedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#TerminatedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Role"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#RouteActivity"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#SharedLiving"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Group"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ImplementationActivity"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/economicobject.owl#Invoice"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#SystemParticipant"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#HumanParticipant"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/system.owl#CRMSystem"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Organization"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/economicobject.owl#Order"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#SubflowImplementationActivity"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#FormalOrganization"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Supplier"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#InformalOrganization"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Employee"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ResourceParticipant"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Marriage"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#JoinControlFlow"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ResourceSetParticipant"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Package"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/economicobject.owl#Contract"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#OrganizationalUnitParticipant"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/economicobject.owl#Complaint"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ControlFlow"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#SplitControlFlow"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/system.owl#BPMSystem"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/system.owl#Account"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/system.owl#System"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ActivitySet"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#BlockActivity"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <owl:complementOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#RoleParticipant"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#NoneImplementationActivity"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/event.owl#WorkflowInstance"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/businesspartner.owl#Person"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/businesspartner.owl#Customer"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/system.owl#EventGeneratingSystem"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/economicobject.owl#EconomicObject"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/event.owl#AbortedEvent"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/event.owl#CancelledEvent"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/event.owl#AssignedEvent"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/event.owl#NotRunningEvent"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/event.owl#FailedEvent"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/event.owl#InitialEvent"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/event.owl#ReadyEvent"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/event.owl#SuccessEvent"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/event.owl#SuspendedEvent"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/event.owl#TerminatedEvent"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/businesspartner.owl#Role"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#RouteActivity"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/businesspartner.owl#SharedLiving"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/businesspartner.owl#Group"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#ImplementationActivity"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/economicobject.owl#Invoice"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#SystemParticipant"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#HumanParticipant"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/system.owl#CRMSystem"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/businesspartner.owl#Organization"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/economicobject.owl#Order"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#SubflowImplementationActivity"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/businesspartner.owl#FormalOrganization"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/businesspartner.owl#Supplier"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/businesspartner.owl#InformalOrganization"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/businesspartner.owl#Employee"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#ResourceParticipant"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/businesspartner.owl#Marriage"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#JoinControlFlow"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#ResourceSetParticipant"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#Package"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/economicobject.owl#Contract"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#OrganizationalUnitParticipant"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/economicobject.owl#Complaint"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#ControlFlow"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#SplitControlFlow"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/system.owl#BPMSystem"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/system.owl#Account"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/system.owl#System"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#ActivitySet"/>
+    <owl:disjointWith rdf:resource="http://www.spi.com/workflow.owl#BlockActivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#SharedLiving">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#SharedLiving"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Group"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/businesspartner.owl#SharedLiving"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent13">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance7"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">130000</j.2:hasTimeMilli>
+    <j.2:succeededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent14"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityEvent13"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#ResourceParticipant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ResourceParticipant"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#ResourceParticipant"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#JoinControlFlow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#JoinControlFlow"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ControlFlow"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#JoinControlFlow"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#hasTimeMilli">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasEmailAddress"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasLastName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasFirstName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasDescription"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeString"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasOrganizationName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressCity"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasGroupName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressHouseNumber"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressCountry"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#hasControlFlowType"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressStreet"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/economicobject.owl#hasInvoiceReferenceNumber"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/economicobject.owl#hasOrderReferenceNumber"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/system.owl#hasSystemName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/economicobject.owl#hasContractReferenceNumber"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/economicobject.owl#hasComplaintReferenceNumber"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/economicobject.owl#hasComplaintDescription"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/system.owl#hasSystemDescription"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/system.owl#hasAccountUserName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/system.owl#hasAccountPassword"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/system.owl#hasAccountRole"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/system.owl#hasAccountName"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#Participant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityInstance1">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:definedByActivity rdf:resource="http://www.order.com/model.rdf#Activity1"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance1"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityInstance1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#EconomicObject1">
+    <rdf:type rdf:resource="http://www.spi.com/economicobject.owl#EconomicObject"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.spi.com/economicobject.owl#Order"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#EconomicObject1"/>
+    <j.1:hasOrderReferenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.1:hasOrderReferenceNumber>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#generatedBySystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/event.owl#WorkflowInstance"/>
+    <rdfs:range rdf:resource="http://www.spi.com/system.owl#EventGeneratingSystem"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#generatedBySystem"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#generatedBySystem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#partOfWorkflow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#partOfWorkflow"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#partOfWorkflow"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent1">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance1"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</j.2:hasTimeMilli>
+    <j.2:succeededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent2"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityEvent1"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#causedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:range rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#causedBy"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#causedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#Organization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Organization"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/businesspartner.owl#Organization"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent14">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance7"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent13"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityEvent14"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent13"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/economicobject.owl#hasComplaintReferenceNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/economicobject.owl#Complaint"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/economicobject.owl#hasComplaintReferenceNumber"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/economicobject.owl#hasComplaintReferenceNumber"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#hasIngoingTransition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#JoinControlFlow"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasIngoingTransition"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#hasIngoingTransition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Person"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/businesspartner.owl#Person"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <owl:hasKey rdf:nodeID="A0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dl.dropboxusercontent.com/u/983997/ontologies/context/businesspartner.owl#hasLastName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://dl.dropboxusercontent.com/u/983997/ontologies/context/businesspartner.owl#hasLastName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://dl.dropboxusercontent.com/u/983997/ontologies/context/businesspartner.owl#hasLastName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent10">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance5"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent9"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityEvent10"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent9"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dl.dropboxusercontent.com/u/983997/ontologies/context/businesspartner.owl#hasFirstName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://dl.dropboxusercontent.com/u/983997/ontologies/context/businesspartner.owl#hasFirstName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://dl.dropboxusercontent.com/u/983997/ontologies/context/businesspartner.owl#hasFirstName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#WorkflowEvent1">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</j.2:hasTimeMilli>
+    <j.2:originatedFromWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance1"/>
+    <j.2:succeededBy rdf:resource="http://www.order.com/model.rdf#WorkflowEvent2"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#WorkflowEvent1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Activity6">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ImplementationActivity"/>
+    <j.4:partOfWorkflow rdf:resource="http://www.order.com/model.rdf#Workflow1"/>
+    <j.4:hasActivityName>File Order</j.4:hasActivityName>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Activity6"/>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity5"/>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity4"/>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity3"/>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity2"/>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity1"/>
+    <j.4:hasApplicationPerformer rdf:resource="http://www.order.com/model.rdf#Application6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#BusinessPartner1">
+    <rdf:type rdf:resource="http://www.spi.com/businesspartner.owl#Person"/>
+    <rdf:type rdf:resource="http://www.spi.com/businesspartner.owl#Customer"/>
+    <rdf:type rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.spi.com/businesspartner.owl#Role"/>
+    <j.0:hasEmailAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">michael.champs@domain.com</j.0:hasEmailAddress>
+    <j.0:hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Champs</j.0:hasLastName>
+    <j.0:hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael</j.0:hasFirstName>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#BusinessPartner1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/economicobject.owl#Order">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/economicobject.owl#EconomicObject"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/economicobject.owl#Order"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/economicobject.owl#Order"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <owl:hasKey rdf:nodeID="A1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/system.owl#hasAccountName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/system.owl#Account"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/system.owl#hasAccountName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/system.owl#hasAccountName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent2">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance1"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent1"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityEvent2"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent1"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#hasDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#hasDescription"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#hasDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#SuccessEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Closed.Completed.Success</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#SuccessEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/event.owl#SuccessEvent"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Application4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Application4"/>
+    <j.4:hasApplicationName>MailAppNegative</j.4:hasApplicationName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#hasSourceActivity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasSourceActivity"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#hasSourceActivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:comment>An event ontology</rdfs:comment>
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/sonaris/spi/master/businesspartner.rdf"/>
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/sonaris/spi/master/economicobject.rdf"/>
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/sonaris/spi/master/system.rdf"/>
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/sonaris/spi/master/workflow.rdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#hasGroupName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#Group"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasGroupName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/businesspartner.owl#hasGroupName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:complementOf rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#hasActivityName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasActivityName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#hasActivityName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent11">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance6"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110000</j.2:hasTimeMilli>
+    <j.2:succeededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent12"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityEvent11"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#hasWorkflowName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasWorkflowName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#hasWorkflowName"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.spi.com/event.owl#precededBy"/>
+    <owl:someValuesFrom rdf:resource="http://www.spi.com/event.owl#Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#AutonomousAgent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#BusinessPartner2">
+    <rdf:type rdf:resource="http://www.spi.com/businesspartner.owl#Person"/>
+    <rdf:type rdf:resource="http://www.spi.com/businesspartner.owl#Customer"/>
+    <rdf:type rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.spi.com/businesspartner.owl#Role"/>
+    <j.0:hasEmailAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adam.williams@domain.com</j.0:hasEmailAddress>
+    <j.0:hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Williams</j.0:hasLastName>
+    <j.0:hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adam</j.0:hasFirstName>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#BusinessPartner2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:oneOf rdf:nodeID="A4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent3">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance2"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30000</j.2:hasTimeMilli>
+    <j.2:succeededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent4"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityEvent3"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#CompletedEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Closed.Completed</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#hasTargetActivity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasTargetActivity"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#hasTargetActivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/economicobject.owl#hasContractReferenceNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/economicobject.owl#Contract"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/economicobject.owl#hasContractReferenceNumber"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/economicobject.owl#hasContractReferenceNumber"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Application5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Application5"/>
+    <j.4:hasApplicationName>ForwardOrderApp</j.4:hasApplicationName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#originatedFromWorkflowInstance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:range rdf:resource="http://www.spi.com/event.owl#WorkflowInstance"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#originatedFromWorkflowInstance"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#originatedFromWorkflowInstance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#SplitControlFlow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ControlFlow"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#SplitControlFlow"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#SplitControlFlow"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#hasTransitionCondition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasTransitionCondition"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#hasTransitionCondition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#RunningEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open.Running</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent12">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance6"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent11"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityEvent12"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent11"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#ApplicationImplementationActivity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ImplementationActivity"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#RouteActivity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#RouteActivity"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#RouteActivity"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/system.owl#hasAccountPassword">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/system.owl#Account"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/system.owl#hasAccountPassword"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/system.owl#hasAccountPassword"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#precededByActivity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <owl:inverseOf rdf:resource="http://www.spi.com/workflow.owl#succeededByActivity"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#precededByActivity"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#precededByActivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#hasOrganizationPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#Organization"/>
+    <rdfs:range rdf:resource="http://www.spi.com/businesspartner.owl#Organization"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasOrganizationPart"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/businesspartner.owl#hasOrganizationPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Transition6">
+    <j.4:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.4:hasTransitionCondition>
+    <j.4:hasTargetActivity rdf:resource="http://www.order.com/model.rdf#Activity6"/>
+    <j.4:hasSourceActivity rdf:resource="http://www.order.com/model.rdf#Activity5"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Transition6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/system.owl#EventGeneratingSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/system.owl#EventGeneratingSystem"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/system.owl#EventGeneratingSystem"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>AND</rdf:first>
+    <rdf:rest rdf:nodeID="A5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#hasLastName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasLastName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/businesspartner.owl#hasLastName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#OpenEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#Customer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Customer"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Role"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/businesspartner.owl#Customer"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#definedInWorkflow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#definedInWorkflow"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#definedInWorkflow"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Application2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Application2"/>
+    <j.4:hasApplicationName>OrderVerificationApp</j.4:hasApplicationName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#Group">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Group"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/businesspartner.owl#Group"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#precededBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:range rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <owl:inverseOf rdf:resource="http://www.spi.com/event.owl#succeededBy"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#precededBy"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#precededBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent17">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance9"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170000</j.2:hasTimeMilli>
+    <j.2:succeededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent18"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityEvent17"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first>XOR</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Workflow1">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.4:hasWorkflowName>New Order</j.4:hasWorkflowName>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Workflow1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#ClosedEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Closed</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#importedFromSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.spi.com/system.owl#System"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#importedFromSystem"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#importedFromSystem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#System1">
+    <rdf:type rdf:resource="http://www.spi.com/system.owl#EventGeneratingSystem"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.spi.com/system.owl#BPMSystem"/>
+    <rdf:type rdf:resource="http://www.spi.com/system.owl#System"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#System1"/>
+    <j.3:hasSystemName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Order System</j.3:hasSystemName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/system.owl#hasSystemDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/system.owl#System"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/system.owl#hasSystemDescription"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/system.owl#hasSystemDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Application3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Application3"/>
+    <j.4:hasApplicationName>MailAppPositive</j.4:hasApplicationName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#RoleParticipant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#RoleParticipant"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#RoleParticipant"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent18">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance9"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent17"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityEvent18"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent17"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#partOfWorkflowInstance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <rdfs:range rdf:resource="http://www.spi.com/event.owl#WorkflowInstance"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#partOfWorkflowInstance"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#partOfWorkflowInstance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/economicobject.owl#Invoice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/economicobject.owl#EconomicObject"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/economicobject.owl#Invoice"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/economicobject.owl#Invoice"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#hasOutgoingTransition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#SplitControlFlow"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasOutgoingTransition"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#hasOutgoingTransition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#FormalOrganization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Organization"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#FormalOrganization"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/businesspartner.owl#FormalOrganization"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:first rdf:resource="http://www.spi.com/businesspartner.owl#hasEmailAddress"/>
+    <rdf:rest rdf:nodeID="A6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#EconomicObject2">
+    <rdf:type rdf:resource="http://www.spi.com/economicobject.owl#EconomicObject"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.spi.com/economicobject.owl#Order"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#EconomicObject2"/>
+    <j.1:hasOrderReferenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</j.1:hasOrderReferenceNumber>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#hasFirstName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasFirstName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/businesspartner.owl#hasFirstName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#Event">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#originatedFromActivityInstance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:range rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#originatedFromActivityInstance"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#originatedFromActivityInstance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent15">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance8"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150000</j.2:hasTimeMilli>
+    <j.2:succeededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent16"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityEvent15"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#WorkflowInstance2">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#WorkflowInstance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:definedByWorkflow rdf:resource="http://www.order.com/model.rdf#Workflow1"/>
+    <j.2:hasBusinessPartnerContext rdf:resource="http://www.order.com/model.rdf#BusinessPartner2"/>
+    <j.2:generatedBySystem rdf:resource="http://www.order.com/model.rdf#System1"/>
+    <j.2:hasEconomicObjectContext rdf:resource="http://www.order.com/model.rdf#EconomicObject2"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#WorkflowInstance2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#hasParticipantPerformer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#NoneImplementationActivity"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasParticipantPerformer"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#hasParticipantPerformer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#hasAddressCountry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressCountry"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressCountry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#NotRunningEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open.NotRunning</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#NotRunningEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/event.owl#NotRunningEvent"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#hasAddressStreet">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressStreet"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressStreet"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:first rdf:resource="http://www.spi.com/businesspartner.owl#hasFirstName"/>
+    <rdf:rest rdf:nodeID="A7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#AssignedEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open.NotRunning.Assigned</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#AssignedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#NotRunningEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/event.owl#AssignedEvent"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#InformalOrganization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Organization"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#InformalOrganization"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/businesspartner.owl#InformalOrganization"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#hasAddressHouseNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressHouseNumber"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressHouseNumber"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Application1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Application1"/>
+    <j.4:hasApplicationName>NewOrderApp</j.4:hasApplicationName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#FailedEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Closed.Completed.Failed</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#FailedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/event.owl#FailedEvent"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#hasParticipantName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasParticipantName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#hasParticipantName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#WorkflowInstance1">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#WorkflowInstance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:definedByWorkflow rdf:resource="http://www.order.com/model.rdf#Workflow1"/>
+    <j.2:hasBusinessPartnerContext rdf:resource="http://www.order.com/model.rdf#BusinessPartner1"/>
+    <j.2:generatedBySystem rdf:resource="http://www.order.com/model.rdf#System1"/>
+    <j.2:hasEconomicObjectContext rdf:resource="http://www.order.com/model.rdf#EconomicObject1"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#WorkflowInstance1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#CancelledEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Closed.Cancelled</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#CancelledEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/event.owl#CancelledEvent"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/economicobject.owl#EconomicObject">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/economicobject.owl#EconomicObject"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/economicobject.owl#EconomicObject"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/economicobject.owl#hasComplaintDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/economicobject.owl#Complaint"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/economicobject.owl#hasComplaintDescription"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/economicobject.owl#hasComplaintDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#Role">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Role"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/businesspartner.owl#Role"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent16">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance8"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent15"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityEvent16"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent15"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#BlockActivity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ActivitySet"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#BlockActivity"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#BlockActivity"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/system.owl#hasAccountRole">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/system.owl#Account"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/system.owl#hasAccountRole"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/system.owl#hasAccountRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/economicobject.owl#hasOrderReferenceNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/economicobject.owl#Order"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/economicobject.owl#hasOrderReferenceNumber"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/economicobject.owl#hasOrderReferenceNumber"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#NoneImplementationActivity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#NoneImplementationActivity"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ImplementationActivity"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#NoneImplementationActivity"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#hasOrganizationName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#Organization"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasOrganizationName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/businesspartner.owl#hasOrganizationName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Transition2">
+    <j.4:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.4:hasTransitionCondition>
+    <j.4:hasTargetActivity rdf:resource="http://www.order.com/model.rdf#Activity3"/>
+    <j.4:hasSourceActivity rdf:resource="http://www.order.com/model.rdf#Activity2"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Transition2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#hasControlFlowType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#ControlFlow"/>
+    <rdfs:range rdf:nodeID="A3"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasControlFlowType"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#hasControlFlowType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/system.owl#Account">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/system.owl#Account"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/system.owl#Account"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#HumanParticipant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#HumanParticipant"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#HumanParticipant"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#bottomObjectProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasTargetActivity"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasSourceActivity"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#originatedFromActivityInstance"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#partOfWorkflow"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#definedByActivity"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#partOfWorkflowInstance"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#precededBy"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#originatedFromWorkflowInstance"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#definedByWorkflow"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#hasBusinessPartnerContext"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#generatedBySystem"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#hasEconomicObjectContext"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#producedByParticipant"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#succeededBy"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#definedInPackage"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasJoin"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasSplit"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasOutgoingTransition"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasMember"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasIngoingTransition"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasOrganizationPart"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#causedBy"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#producedByApplication"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#producedByAccount"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/system.owl#isPartOfSystem"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#belongsToParticipant"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#importedFromSystem"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#precededByActivity"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasParticipantPerformer"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasApplicationPerformer"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#succeededByActivity"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#definedInWorkflow"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#definedInActivitySet"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#hasTargetActivity"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#hasSourceActivity"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#originatedFromActivityInstance"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#partOfWorkflow"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#definedByActivity"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#partOfWorkflowInstance"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#precededBy"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#originatedFromWorkflowInstance"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#definedByWorkflow"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasBusinessPartnerContext"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#generatedBySystem"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasEconomicObjectContext"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#producedByParticipant"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#succeededBy"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#definedInPackage"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#hasJoin"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#hasSplit"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#hasOutgoingTransition"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasMember"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#hasIngoingTransition"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasOrganizationPart"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#causedBy"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#producedByApplication"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#producedByAccount"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/system.owl#isPartOfSystem"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#belongsToParticipant"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#importedFromSystem"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#precededByActivity"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#hasParticipantPerformer"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#hasApplicationPerformer"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#succeededByActivity"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#definedInWorkflow"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#definedInActivitySet"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:first rdf:resource="http://www.spi.com/economicobject.owl#hasOrderReferenceNumber"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent8">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance4"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent7"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityEvent8"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent7"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Activity1">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ImplementationActivity"/>
+    <j.4:partOfWorkflow rdf:resource="http://www.order.com/model.rdf#Workflow1"/>
+    <j.4:hasActivityName>Create New Order</j.4:hasActivityName>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Activity1"/>
+    <j.4:hasApplicationPerformer rdf:resource="http://www.order.com/model.rdf#Application1"/>
+    <j.4:succeededByActivity rdf:resource="http://www.order.com/model.rdf#Activity6"/>
+    <j.4:succeededByActivity rdf:resource="http://www.order.com/model.rdf#Activity5"/>
+    <j.4:succeededByActivity rdf:resource="http://www.order.com/model.rdf#Activity4"/>
+    <j.4:succeededByActivity rdf:resource="http://www.order.com/model.rdf#Activity3"/>
+    <j.4:succeededByActivity rdf:resource="http://www.order.com/model.rdf#Activity2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#TerminatedEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Closed.Cancelled.Terminated</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#CancelledEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#TerminatedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/event.owl#TerminatedEvent"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Transition3">
+    <j.4:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.4:hasTransitionCondition>
+    <j.4:hasTargetActivity rdf:resource="http://www.order.com/model.rdf#Activity4"/>
+    <j.4:hasSourceActivity rdf:resource="http://www.order.com/model.rdf#Activity3"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Transition3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityInstance9">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:definedByActivity rdf:resource="http://www.order.com/model.rdf#Activity6"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance2"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityInstance9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#Transition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#hasEconomicObjectContext">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/event.owl#WorkflowInstance"/>
+    <rdfs:range rdf:resource="http://www.spi.com/economicobject.owl#EconomicObject"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#hasEconomicObjectContext"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#hasEconomicObjectContext"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#OrganizationalUnitParticipant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#OrganizationalUnitParticipant"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#OrganizationalUnitParticipant"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#SubflowImplementationActivity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ImplementationActivity"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#SubflowImplementationActivity"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#SubflowImplementationActivity"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/system.owl#hasSystemName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/system.owl#System"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/system.owl#hasSystemName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/system.owl#hasSystemName"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="A9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent9">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance5"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90000</j.2:hasTimeMilli>
+    <j.2:succeededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent10"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityEvent9"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#hasTransitionName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasTransitionName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#hasTransitionName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#hasEmailAddress">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasEmailAddress"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/businesspartner.owl#hasEmailAddress"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Transition4">
+    <j.4:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.4:hasTransitionCondition>
+    <j.4:hasTargetActivity rdf:resource="http://www.order.com/model.rdf#Activity5"/>
+    <j.4:hasSourceActivity rdf:resource="http://www.order.com/model.rdf#Activity2"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Transition4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#producedByApplication">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#producedByApplication"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#producedByApplication"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#ReadyEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open.NotRunning.Ready</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#NotRunningEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#ReadyEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/event.owl#ReadyEvent"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#producedByAccount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:range rdf:resource="http://www.spi.com/system.owl#Account"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#producedByAccount"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#producedByAccount"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityInstance8">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:definedByActivity rdf:resource="http://www.order.com/model.rdf#Activity5"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance2"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityInstance8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#bottomDataProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasTransitionCondition"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasActivityName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasParticipantName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasWorkflowName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasEmailAddress"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasLastName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasFirstName"/>
+    <rdfs:subPropertyOf rdf:resource="http://dl.dropboxusercontent.com/u/983997/ontologies/context/businesspartner.owl#hasFirstName"/>
+    <rdfs:subPropertyOf rdf:resource="http://dl.dropboxusercontent.com/u/983997/ontologies/context/businesspartner.owl#hasLastName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#hasDescription"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#hasTimeString"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasOrganizationName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressCity"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasGroupName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressHouseNumber"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressCountry"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasControlFlowType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressStreet"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasWorkflowVersion"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasPackageName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/economicobject.owl#hasInvoiceReferenceNumber"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasTransitionName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/economicobject.owl#hasOrderReferenceNumber"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasApplicationName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/system.owl#hasSystemName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/economicobject.owl#hasContractReferenceNumber"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/economicobject.owl#hasComplaintReferenceNumber"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/economicobject.owl#hasComplaintDescription"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/system.owl#hasSystemDescription"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/system.owl#hasAccountUserName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/system.owl#hasAccountPassword"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/system.owl#hasAccountRole"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/system.owl#hasAccountName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#hasTransitionCondition"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#hasActivityName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#hasParticipantName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#hasWorkflowName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasEmailAddress"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasLastName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasFirstName"/>
+    <owl:propertyDisjointWith rdf:resource="http://dl.dropboxusercontent.com/u/983997/ontologies/context/businesspartner.owl#hasFirstName"/>
+    <owl:propertyDisjointWith rdf:resource="http://dl.dropboxusercontent.com/u/983997/ontologies/context/businesspartner.owl#hasLastName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasDescription"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeString"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasOrganizationName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressCity"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasGroupName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressHouseNumber"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressCountry"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#hasControlFlowType"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressStreet"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#hasWorkflowVersion"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#hasPackageName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/economicobject.owl#hasInvoiceReferenceNumber"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#hasTransitionName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/economicobject.owl#hasOrderReferenceNumber"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/workflow.owl#hasApplicationName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/system.owl#hasSystemName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/economicobject.owl#hasContractReferenceNumber"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/economicobject.owl#hasComplaintReferenceNumber"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/economicobject.owl#hasComplaintDescription"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/system.owl#hasSystemDescription"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/system.owl#hasAccountUserName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/system.owl#hasAccountPassword"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/system.owl#hasAccountRole"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/system.owl#hasAccountName"/>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#hasApplicationPerformer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasApplicationPerformer"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#hasApplicationPerformer"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:first rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:rest rdf:nodeID="A10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#definedInPackage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Package"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#definedInPackage"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#definedInPackage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#ActivitySet">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ActivitySet"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#ActivitySet"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/system.owl#BPMSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/system.owl#BPMSystem"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/system.owl#System"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/system.owl#BPMSystem"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#hasWorkflowVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasWorkflowVersion"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#hasWorkflowVersion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityInstance7">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:definedByActivity rdf:resource="http://www.order.com/model.rdf#Activity2"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance2"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityInstance7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Transition5">
+    <j.4:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.4:hasTransitionCondition>
+    <j.4:hasTargetActivity rdf:resource="http://www.order.com/model.rdf#Activity6"/>
+    <j.4:hasSourceActivity rdf:resource="http://www.order.com/model.rdf#Activity4"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Transition5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/system.owl#CRMSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/system.owl#CRMSystem"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/system.owl#System"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/system.owl#CRMSystem"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#hasSplit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#SplitControlFlow"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasSplit"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#hasSplit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#ActivityInstance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:complementOf rdf:nodeID="A2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#definedByActivity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#definedByActivity"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#definedByActivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityInstance6">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:definedByActivity rdf:resource="http://www.order.com/model.rdf#Activity1"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance2"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityInstance6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#Application">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#Employee">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Role"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Employee"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/businesspartner.owl#Employee"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#WorkflowEvent3">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300000</j.2:hasTimeMilli>
+    <j.2:originatedFromWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance2"/>
+    <j.2:succeededBy rdf:resource="http://www.order.com/model.rdf#WorkflowEvent4"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#WorkflowEvent3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#Workflow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#belongsToParticipant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/system.owl#Account"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#belongsToParticipant"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#belongsToParticipant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Activity4">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ImplementationActivity"/>
+    <j.4:partOfWorkflow rdf:resource="http://www.order.com/model.rdf#Workflow1"/>
+    <j.4:hasActivityName>Forward Order</j.4:hasActivityName>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Activity4"/>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity3"/>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity2"/>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity1"/>
+    <j.4:hasApplicationPerformer rdf:resource="http://www.order.com/model.rdf#Application4"/>
+    <j.4:succeededByActivity rdf:resource="http://www.order.com/model.rdf#Activity6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:first rdf:nodeID="A11"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/economicobject.owl#hasInvoiceReferenceNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/economicobject.owl#Invoice"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/economicobject.owl#hasInvoiceReferenceNumber"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/economicobject.owl#hasInvoiceReferenceNumber"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent4">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance2"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent3"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityEvent4"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent3"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/economicobject.owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityInstance5">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:definedByActivity rdf:resource="http://www.order.com/model.rdf#Activity6"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance1"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityInstance5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#Marriage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Group"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Marriage"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/businesspartner.owl#Marriage"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/economicobject.owl#Complaint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/economicobject.owl#EconomicObject"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/economicobject.owl#Complaint"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/economicobject.owl#Complaint"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#Activity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#Package">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Package"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#Package"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#ResourceSetParticipant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#ResourceSetParticipant"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#ResourceSetParticipant"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:comment>A workflow ontology based on XPDL</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/system.owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#WorkflowEvent2">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#WorkflowEvent1"/>
+    <j.2:originatedFromWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance1"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#WorkflowEvent2"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#WorkflowEvent1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Activity5">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ImplementationActivity"/>
+    <j.4:partOfWorkflow rdf:resource="http://www.order.com/model.rdf#Workflow1"/>
+    <j.4:hasActivityName>Send Negative Answer</j.4:hasActivityName>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Activity5"/>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity2"/>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity1"/>
+    <j.4:hasApplicationPerformer rdf:resource="http://www.order.com/model.rdf#Application5"/>
+    <j.4:succeededByActivity rdf:resource="http://www.order.com/model.rdf#Activity6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#Supplier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Role"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/businesspartner.owl#Supplier"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/businesspartner.owl#Supplier"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent5">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance3"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</j.2:hasTimeMilli>
+    <j.2:succeededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent6"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityEvent5"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:first rdf:resource="http://www.spi.com/businesspartner.owl#hasLastName"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Activity2">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ImplementationActivity"/>
+    <j.4:partOfWorkflow rdf:resource="http://www.order.com/model.rdf#Workflow1"/>
+    <j.4:hasActivityName>Verify Order</j.4:hasActivityName>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Activity2"/>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity1"/>
+    <j.4:hasApplicationPerformer rdf:resource="http://www.order.com/model.rdf#Application2"/>
+    <j.4:succeededByActivity rdf:resource="http://www.order.com/model.rdf#Activity6"/>
+    <j.4:succeededByActivity rdf:resource="http://www.order.com/model.rdf#Activity5"/>
+    <j.4:succeededByActivity rdf:resource="http://www.order.com/model.rdf#Activity4"/>
+    <j.4:succeededByActivity rdf:resource="http://www.order.com/model.rdf#Activity3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/system.owl#System">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/system.owl#System"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/system.owl#System"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityInstance4">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:definedByActivity rdf:resource="http://www.order.com/model.rdf#Activity4"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance1"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityInstance4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/businesspartner.owl#hasAddressCity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressCity"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/businesspartner.owl#hasAddressCity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/economicobject.owl#Contract">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/economicobject.owl#EconomicObject"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/economicobject.owl#Contract"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/economicobject.owl#Contract"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#WorkflowInstance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#WorkflowInstance"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/event.owl#WorkflowInstance"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#SystemParticipant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/workflow.owl#SystemParticipant"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/workflow.owl#SystemParticipant"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent6">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance3"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent5"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityEvent6"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent5"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#hasJoin">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#JoinControlFlow"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasJoin"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#hasJoin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/system.owl#hasAccountUserName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/system.owl#Account"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/system.owl#hasAccountUserName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/system.owl#hasAccountUserName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#producedByParticipant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Participant"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#producedByParticipant"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#producedByParticipant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#InitialEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#InitialEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/event.owl#InitialEvent"/>
+    <owl:equivalentClass rdf:nodeID="A8"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityInstance3">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:definedByActivity rdf:resource="http://www.order.com/model.rdf#Activity3"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance1"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityInstance3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#hasBusinessPartnerContext">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/event.owl#WorkflowInstance"/>
+    <rdfs:range rdf:resource="http://www.spi.com/businesspartner.owl#AutonomousAgent"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#hasBusinessPartnerContext"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#hasBusinessPartnerContext"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#definedInActivitySet">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#ActivitySet"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#definedInActivitySet"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#definedInActivitySet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Transition1">
+    <j.4:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.4:hasTransitionCondition>
+    <j.4:hasTargetActivity rdf:resource="http://www.order.com/model.rdf#Activity2"/>
+    <j.4:hasSourceActivity rdf:resource="http://www.order.com/model.rdf#Activity1"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Transition1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#WorkflowEvent4">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#WorkflowEvent3"/>
+    <j.2:originatedFromWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance2"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#WorkflowEvent4"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#WorkflowEvent3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#SuspendedEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open.NotRunning.Suspended</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#NotRunningEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#SuspendedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/event.owl#SuspendedEvent"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#hasTimeString">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#hasTimeString"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.spi.com/event.owl#hasTimeMilli"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#hasTimeString"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#succeededByActivity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <owl:inverseOf rdf:resource="http://www.spi.com/workflow.owl#precededByActivity"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#succeededByActivity"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#succeededByActivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Activity3">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Activity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ImplementationActivity"/>
+    <j.4:partOfWorkflow rdf:resource="http://www.order.com/model.rdf#Workflow1"/>
+    <j.4:hasActivityName>Send Positive Answer</j.4:hasActivityName>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#Activity3"/>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity2"/>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity1"/>
+    <j.4:hasApplicationPerformer rdf:resource="http://www.order.com/model.rdf#Application3"/>
+    <j.4:succeededByActivity rdf:resource="http://www.order.com/model.rdf#Activity6"/>
+    <j.4:succeededByActivity rdf:resource="http://www.order.com/model.rdf#Activity4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/system.owl#isPartOfSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/system.owl#Account"/>
+    <rdfs:range rdf:resource="http://www.spi.com/system.owl#System"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/system.owl#isPartOfSystem"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/system.owl#isPartOfSystem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#hasPackageName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Package"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasPackageName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#hasPackageName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent7">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#OpenEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance4"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70000</j.2:hasTimeMilli>
+    <j.2:succeededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent8"/>
+    <owl:sameAs rdf:resource="http://www.order.com/model.rdf#ActivityEvent7"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#AbortedEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Closed.Cancelled.Aborted</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#Event"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#AbortedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#CancelledEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.spi.com/event.owl#ClosedEvent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.spi.com/event.owl#AbortedEvent"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/event.owl#definedByWorkflow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/event.owl#WorkflowInstance"/>
+    <rdfs:range rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/event.owl#definedByWorkflow"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/event.owl#definedByWorkflow"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.spi.com/workflow.owl#hasApplicationName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.spi.com/workflow.owl#hasApplicationName"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.w3.org/2002/07/owl#bottomDataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://www.spi.com/workflow.owl#hasApplicationName"/>
+  </rdf:Description>
+</rdf:RDF>

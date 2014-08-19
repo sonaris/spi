@@ -1,0 +1,471 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.spi.com/businesspartner.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.1="http://www.spi.com/economicobject.owl#"
+    xmlns:j.2="http://www.spi.com/event.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.3="http://www.spi.com/system.owl#"
+    xmlns:j.4="http://www.spi.com/workflow.owl#" > 
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#System1">
+    <rdf:type rdf:resource="http://www.spi.com/system.owl#BPMSystem"/>
+    <j.3:hasSystemName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Complaint System</j.3:hasSystemName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#EconomicObject3">
+    <rdf:type rdf:resource="http://www.spi.com/economicobject.owl#Order"/>
+    <j.1:hasOrderReferenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</j.1:hasOrderReferenceNumber>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#Activity3">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#NoneImplementationActivity"/>
+    <j.4:partOfWorkflow rdf:resource="http://www.complaint.com/model.rdf#Workflow1"/>
+    <j.4:hasActivityName>Provide Solution</j.4:hasActivityName>
+    <j.4:precededByActivity rdf:resource="http://www.complaint.com/model.rdf#Activity2"/>
+    <j.4:hasParticipantPerformer rdf:resource="http://www.complaint.com/model.rdf#Participant2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent11">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#AssignedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance3"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483310000</j.2:hasTimeMilli>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent23">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#AssignedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance6"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483470000</j.2:hasTimeMilli>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#Workflow1">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+    <j.4:hasWorkflowName>Complaint Handling</j.4:hasWorkflowName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent31">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance7"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483550000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent30"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent30"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#Transition1">
+    <j.4:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.4:hasTransitionCondition>
+    <j.4:hasTargetActivity rdf:resource="http://www.complaint.com/model.rdf#Activity2"/>
+    <j.4:hasSourceActivity rdf:resource="http://www.complaint.com/model.rdf#Activity1"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#WorkflowEvent2">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483410000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#WorkflowEvent1"/>
+    <j.2:originatedFromWorkflowInstance rdf:resource="http://www.complaint.com/model.rdf#WorkflowInstance1"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#WorkflowEvent1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityInstance4">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <j.2:definedByActivity rdf:resource="http://www.complaint.com/model.rdf#Activity5"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.complaint.com/model.rdf#WorkflowInstance1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#Transition5">
+    <j.4:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.4:hasTransitionCondition>
+    <j.4:hasTargetActivity rdf:resource="http://www.complaint.com/model.rdf#Activity5"/>
+    <j.4:hasSourceActivity rdf:resource="http://www.complaint.com/model.rdf#Activity4"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent3">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#SuspendedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance1"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483220000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent2"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent2"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent16">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance4"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483370000</j.2:hasTimeMilli>
+    <j.2:producedByApplication rdf:resource="http://www.complaint.com/model.rdf#Application1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent28">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#AssignedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance7"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483520000</j.2:hasTimeMilli>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityInstance8">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <j.2:definedByActivity rdf:resource="http://www.complaint.com/model.rdf#Activity5"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.complaint.com/model.rdf#WorkflowInstance2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent7">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance2"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483260000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent6"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent6"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#WorkflowInstance2">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#WorkflowInstance"/>
+    <j.2:definedByWorkflow rdf:resource="http://www.complaint.com/model.rdf#Workflow1"/>
+    <j.2:hasBusinessPartnerContext rdf:resource="http://www.complaint.com/model.rdf#BusinessPartner2"/>
+    <j.2:generatedBySystem rdf:resource="http://www.complaint.com/model.rdf#System1"/>
+    <j.2:hasEconomicObjectContext rdf:resource="http://www.complaint.com/model.rdf#EconomicObject2"/>
+    <j.2:hasEconomicObjectContext rdf:resource="http://www.complaint.com/model.rdf#EconomicObject4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#Activity2">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#NoneImplementationActivity"/>
+    <j.4:partOfWorkflow rdf:resource="http://www.complaint.com/model.rdf#Workflow1"/>
+    <j.4:hasActivityName>Analyze Case</j.4:hasActivityName>
+    <j.4:precededByActivity rdf:resource="http://www.complaint.com/model.rdf#Activity1"/>
+    <j.4:hasParticipantPerformer rdf:resource="http://www.complaint.com/model.rdf#Participant2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#WorkflowEvent1">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483200000</j.2:hasTimeMilli>
+    <j.2:originatedFromWorkflowInstance rdf:resource="http://www.complaint.com/model.rdf#WorkflowInstance1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent22">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance5"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483460000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent21"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent21"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent34">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance8"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483610000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent33"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent33"/>
+    <j.2:producedByApplication rdf:resource="http://www.complaint.com/model.rdf#Application1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#Account2">
+    <rdf:type rdf:resource="http://www.spi.com/system.owl#Account"/>
+    <j.3:hasAccountUserName>analyst1@domain.de</j.3:hasAccountUserName>
+    <j.2:belongsToParticipant rdf:resource="http://www.complaint.com/model.rdf#Participant2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent14">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance3"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483340000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent13"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent13"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityInstance2">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <j.2:definedByActivity rdf:resource="http://www.complaint.com/model.rdf#Activity2"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.complaint.com/model.rdf#WorkflowInstance1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent30">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#SuspendedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance7"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483540000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent29"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent29"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent10">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance2"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483295000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent9"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent9"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent19">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance5"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483430000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent18"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent18"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#BusinessPartner2">
+    <rdf:type rdf:resource="http://www.spi.com/businesspartner.owl#Person"/>
+    <rdf:type rdf:resource="http://www.spi.com/businesspartner.owl#Customer"/>
+    <j.0:hasEmailAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adam.williams@domain.com</j.0:hasEmailAddress>
+    <j.0:hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Williams</j.0:hasLastName>
+    <j.0:hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adam</j.0:hasFirstName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityInstance3">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <j.2:definedByActivity rdf:resource="http://www.complaint.com/model.rdf#Activity3"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.complaint.com/model.rdf#WorkflowInstance1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#Transition4">
+    <j.4:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.4:hasTransitionCondition>
+    <j.4:hasTargetActivity rdf:resource="http://www.complaint.com/model.rdf#Activity5"/>
+    <j.4:hasSourceActivity rdf:resource="http://www.complaint.com/model.rdf#Activity3"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent15">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance3"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483350000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent14"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent14"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent27">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance6"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483512000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent26"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent26"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#Application1">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <j.4:hasApplicationName>FileCaseApp</j.4:hasApplicationName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityInstance7">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <j.2:definedByActivity rdf:resource="http://www.complaint.com/model.rdf#Activity4"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.complaint.com/model.rdf#WorkflowInstance2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent4">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance1"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483230000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent3"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent3"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#WorkflowInstance1">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#WorkflowInstance"/>
+    <j.2:definedByWorkflow rdf:resource="http://www.complaint.com/model.rdf#Workflow1"/>
+    <j.2:hasBusinessPartnerContext rdf:resource="http://www.complaint.com/model.rdf#BusinessPartner1"/>
+    <j.2:generatedBySystem rdf:resource="http://www.complaint.com/model.rdf#System1"/>
+    <j.2:hasEconomicObjectContext rdf:resource="http://www.complaint.com/model.rdf#EconomicObject1"/>
+    <j.2:hasEconomicObjectContext rdf:resource="http://www.complaint.com/model.rdf#EconomicObject3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent8">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#SuspendedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance2"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483265000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent7"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent7"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#EconomicObject2">
+    <rdf:type rdf:resource="http://www.spi.com/economicobject.owl#Complaint"/>
+    <j.1:hasComplaintReferenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</j.1:hasComplaintReferenceNumber>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#Participant2">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#RoleParticipant"/>
+    <j.4:hasParticipantName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analyst</j.4:hasParticipantName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#Activity1">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#NoneImplementationActivity"/>
+    <j.4:partOfWorkflow rdf:resource="http://www.complaint.com/model.rdf#Workflow1"/>
+    <j.4:hasActivityName>Create New Case</j.4:hasActivityName>
+    <j.4:hasParticipantPerformer rdf:resource="http://www.complaint.com/model.rdf#Participant1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#Activity5">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    <j.4:partOfWorkflow rdf:resource="http://www.complaint.com/model.rdf#Workflow1"/>
+    <j.4:hasActivityName>File Case</j.4:hasActivityName>
+    <j.4:precededByActivity rdf:resource="http://www.complaint.com/model.rdf#Activity4"/>
+    <j.4:precededByActivity rdf:resource="http://www.complaint.com/model.rdf#Activity3"/>
+    <j.4:hasApplicationPerformer rdf:resource="http://www.complaint.com/model.rdf#Application1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#Account1">
+    <rdf:type rdf:resource="http://www.spi.com/system.owl#Account"/>
+    <j.3:hasAccountUserName>service_agent1@domain.de</j.3:hasAccountUserName>
+    <j.2:belongsToParticipant rdf:resource="http://www.complaint.com/model.rdf#Participant1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent33">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance8"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483580000</j.2:hasTimeMilli>
+    <j.2:producedByApplication rdf:resource="http://www.complaint.com/model.rdf#Application1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent13">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#SuspendedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance3"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483330000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent12"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent12"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent25">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#SuspendedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance6"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483490000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent24"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent24"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#Transition3">
+    <j.4:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.4:hasTransitionCondition>
+    <j.4:hasTargetActivity rdf:resource="http://www.complaint.com/model.rdf#Activity4"/>
+    <j.4:hasSourceActivity rdf:resource="http://www.complaint.com/model.rdf#Activity2"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityInstance1">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <j.2:definedByActivity rdf:resource="http://www.complaint.com/model.rdf#Activity1"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.complaint.com/model.rdf#WorkflowInstance1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#WorkflowEvent4">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483610000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#WorkflowEvent3"/>
+    <j.2:originatedFromWorkflowInstance rdf:resource="http://www.complaint.com/model.rdf#WorkflowInstance2"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#WorkflowEvent3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent21">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance5"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483450000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent20"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent20"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityInstance6">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <j.2:definedByActivity rdf:resource="http://www.complaint.com/model.rdf#Activity2"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.complaint.com/model.rdf#WorkflowInstance2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#BusinessPartner1">
+    <rdf:type rdf:resource="http://www.spi.com/businesspartner.owl#Person"/>
+    <rdf:type rdf:resource="http://www.spi.com/businesspartner.owl#Customer"/>
+    <j.0:hasEmailAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gregory.mitchel@domain.com</j.0:hasEmailAddress>
+    <j.0:hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitchel</j.0:hasLastName>
+    <j.0:hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gregory</j.0:hasFirstName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent1">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#AssignedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance1"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483200000</j.2:hasTimeMilli>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent26">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance6"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483500000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent25"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent25"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent5">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance1"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483240000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent4"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent4"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent18">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#AssignedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance5"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483420000</j.2:hasTimeMilli>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent9">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance2"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483280000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent8"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent8"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#Participant1">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#RoleParticipant"/>
+    <j.4:hasParticipantName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ServiceAgent</j.4:hasParticipantName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#EconomicObject1">
+    <rdf:type rdf:resource="http://www.spi.com/economicobject.owl#Complaint"/>
+    <j.1:hasComplaintReferenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.1:hasComplaintReferenceNumber>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#EconomicObject4">
+    <rdf:type rdf:resource="http://www.spi.com/economicobject.owl#Order"/>
+    <j.1:hasOrderReferenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</j.1:hasOrderReferenceNumber>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#Activity4">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#NoneImplementationActivity"/>
+    <j.4:partOfWorkflow rdf:resource="http://www.complaint.com/model.rdf#Workflow1"/>
+    <j.4:hasActivityName>Notify Customer</j.4:hasActivityName>
+    <j.4:precededByActivity rdf:resource="http://www.complaint.com/model.rdf#Activity2"/>
+    <j.4:hasParticipantPerformer rdf:resource="http://www.complaint.com/model.rdf#Participant2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent12">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance3"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483320000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent11"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent11"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent24">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance6"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483480000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent23"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent23"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#Transition2">
+    <j.4:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.4:hasTransitionCondition>
+    <j.4:hasTargetActivity rdf:resource="http://www.complaint.com/model.rdf#Activity3"/>
+    <j.4:hasSourceActivity rdf:resource="http://www.complaint.com/model.rdf#Activity2"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#WorkflowEvent3">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483420000</j.2:hasTimeMilli>
+    <j.2:originatedFromWorkflowInstance rdf:resource="http://www.complaint.com/model.rdf#WorkflowInstance2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent20">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#SuspendedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance5"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483440000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent19"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent19"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent32">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance7"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483560000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent31"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent31"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityInstance5">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <j.2:definedByActivity rdf:resource="http://www.complaint.com/model.rdf#Activity1"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.complaint.com/model.rdf#WorkflowInstance2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent2">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance1"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483210000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent1"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent1"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent17">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance4"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483410000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent16"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent16"/>
+    <j.2:producedByApplication rdf:resource="http://www.complaint.com/model.rdf#Application1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent29">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance7"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483530000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent28"/>
+    <j.2:causedBy rdf:resource="http://www.complaint.com/model.rdf#ActivityEvent28"/>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.complaint.com/model.rdf#ActivityEvent6">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#AssignedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.complaint.com/model.rdf#ActivityInstance2"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1405483250000</j.2:hasTimeMilli>
+    <j.2:producedByAccount rdf:resource="http://www.complaint.com/model.rdf#Account2"/>
+  </rdf:Description>
+</rdf:RDF>

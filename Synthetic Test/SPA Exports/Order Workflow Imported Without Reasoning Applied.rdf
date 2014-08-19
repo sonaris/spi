@@ -1,0 +1,351 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.spi.com/businesspartner.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.1="http://www.spi.com/economicobject.owl#"
+    xmlns:j.2="http://www.spi.com/event.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.3="http://www.spi.com/system.owl#"
+    xmlns:j.4="http://www.spi.com/workflow.owl#" > 
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityInstance6">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <j.2:definedByActivity rdf:resource="http://www.order.com/model.rdf#Activity1"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Transition6">
+    <j.4:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.4:hasTransitionCondition>
+    <j.4:hasTargetActivity rdf:resource="http://www.order.com/model.rdf#Activity6"/>
+    <j.4:hasSourceActivity rdf:resource="http://www.order.com/model.rdf#Activity5"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityInstance2">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <j.2:definedByActivity rdf:resource="http://www.order.com/model.rdf#Activity2"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Transition2">
+    <j.4:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.4:hasTransitionCondition>
+    <j.4:hasTargetActivity rdf:resource="http://www.order.com/model.rdf#Activity3"/>
+    <j.4:hasSourceActivity rdf:resource="http://www.order.com/model.rdf#Activity2"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#WorkflowEvent3">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300000</j.2:hasTimeMilli>
+    <j.2:originatedFromWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Application6">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <j.4:hasApplicationName>FileOrderApp</j.4:hasApplicationName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Activity4">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    <j.4:partOfWorkflow rdf:resource="http://www.order.com/model.rdf#Workflow1"/>
+    <j.4:hasActivityName>Forward Order</j.4:hasActivityName>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity3"/>
+    <j.4:hasApplicationPerformer rdf:resource="http://www.order.com/model.rdf#Application4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent4">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance2"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent3"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent3"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Application2">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <j.4:hasApplicationName>OrderVerificationApp</j.4:hasApplicationName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent8">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance4"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent7"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent7"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent13">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance7"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">130000</j.2:hasTimeMilli>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent17">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance9"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170000</j.2:hasTimeMilli>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Activity1">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    <j.4:partOfWorkflow rdf:resource="http://www.order.com/model.rdf#Workflow1"/>
+    <j.4:hasActivityName>Create New Order</j.4:hasActivityName>
+    <j.4:hasApplicationPerformer rdf:resource="http://www.order.com/model.rdf#Application1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityInstance5">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <j.2:definedByActivity rdf:resource="http://www.order.com/model.rdf#Activity6"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Transition3">
+    <j.4:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.4:hasTransitionCondition>
+    <j.4:hasTargetActivity rdf:resource="http://www.order.com/model.rdf#Activity4"/>
+    <j.4:hasSourceActivity rdf:resource="http://www.order.com/model.rdf#Activity3"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityInstance1">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <j.2:definedByActivity rdf:resource="http://www.order.com/model.rdf#Activity1"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Workflow1">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Workflow"/>
+    <j.4:hasWorkflowName>New Order</j.4:hasWorkflowName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#EconomicObject1">
+    <rdf:type rdf:resource="http://www.spi.com/economicobject.owl#Order"/>
+    <j.1:hasOrderReferenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</j.1:hasOrderReferenceNumber>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#WorkflowEvent2">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#WorkflowEvent1"/>
+    <j.2:originatedFromWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance1"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#WorkflowEvent1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Activity5">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    <j.4:partOfWorkflow rdf:resource="http://www.order.com/model.rdf#Workflow1"/>
+    <j.4:hasActivityName>Send Negative Answer</j.4:hasActivityName>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity2"/>
+    <j.4:hasApplicationPerformer rdf:resource="http://www.order.com/model.rdf#Application5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityInstance9">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <j.2:definedByActivity rdf:resource="http://www.order.com/model.rdf#Activity6"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent1">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance1"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</j.2:hasTimeMilli>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#System1">
+    <rdf:type rdf:resource="http://www.spi.com/system.owl#BPMSystem"/>
+    <j.3:hasSystemName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Order System</j.3:hasSystemName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent5">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance3"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</j.2:hasTimeMilli>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Application3">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <j.4:hasApplicationName>MailAppPositive</j.4:hasApplicationName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent9">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance5"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90000</j.2:hasTimeMilli>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent14">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance7"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent13"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent13"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent18">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance9"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent17"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent17"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Activity2">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    <j.4:partOfWorkflow rdf:resource="http://www.order.com/model.rdf#Workflow1"/>
+    <j.4:hasActivityName>Verify Order</j.4:hasActivityName>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity1"/>
+    <j.4:hasApplicationPerformer rdf:resource="http://www.order.com/model.rdf#Application2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityInstance4">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <j.2:definedByActivity rdf:resource="http://www.order.com/model.rdf#Activity4"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent10">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance5"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent9"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent9"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Transition4">
+    <j.4:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.4:hasTransitionCondition>
+    <j.4:hasTargetActivity rdf:resource="http://www.order.com/model.rdf#Activity5"/>
+    <j.4:hasSourceActivity rdf:resource="http://www.order.com/model.rdf#Activity2"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#EconomicObject2">
+    <rdf:type rdf:resource="http://www.spi.com/economicobject.owl#Order"/>
+    <j.1:hasOrderReferenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</j.1:hasOrderReferenceNumber>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#WorkflowEvent1">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</j.2:hasTimeMilli>
+    <j.2:originatedFromWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Activity6">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    <j.4:partOfWorkflow rdf:resource="http://www.order.com/model.rdf#Workflow1"/>
+    <j.4:hasActivityName>File Order</j.4:hasActivityName>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity5"/>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity4"/>
+    <j.4:hasApplicationPerformer rdf:resource="http://www.order.com/model.rdf#Application6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#BusinessPartner1">
+    <rdf:type rdf:resource="http://www.spi.com/businesspartner.owl#Person"/>
+    <rdf:type rdf:resource="http://www.spi.com/businesspartner.owl#Customer"/>
+    <j.0:hasEmailAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">michael.champs@domain.com</j.0:hasEmailAddress>
+    <j.0:hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Champs</j.0:hasLastName>
+    <j.0:hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael</j.0:hasFirstName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityInstance8">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <j.2:definedByActivity rdf:resource="http://www.order.com/model.rdf#Activity5"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent2">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance1"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent1"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent1"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Application4">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <j.4:hasApplicationName>MailAppNegative</j.4:hasApplicationName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent6">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance3"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent5"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent5"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent15">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance8"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150000</j.2:hasTimeMilli>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#WorkflowInstance2">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#WorkflowInstance"/>
+    <j.2:definedByWorkflow rdf:resource="http://www.order.com/model.rdf#Workflow1"/>
+    <j.2:hasBusinessPartnerContext rdf:resource="http://www.order.com/model.rdf#BusinessPartner2"/>
+    <j.2:generatedBySystem rdf:resource="http://www.order.com/model.rdf#System1"/>
+    <j.2:hasEconomicObjectContext rdf:resource="http://www.order.com/model.rdf#EconomicObject2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityInstance7">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <j.2:definedByActivity rdf:resource="http://www.order.com/model.rdf#Activity2"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Transition5">
+    <j.4:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.4:hasTransitionCondition>
+    <j.4:hasTargetActivity rdf:resource="http://www.order.com/model.rdf#Activity6"/>
+    <j.4:hasSourceActivity rdf:resource="http://www.order.com/model.rdf#Activity4"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent11">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance6"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110000</j.2:hasTimeMilli>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityInstance3">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#ActivityInstance"/>
+    <j.2:definedByActivity rdf:resource="http://www.order.com/model.rdf#Activity3"/>
+    <j.2:partOfWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Transition1">
+    <j.4:hasTransitionCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true</j.4:hasTransitionCondition>
+    <j.4:hasTargetActivity rdf:resource="http://www.order.com/model.rdf#Activity2"/>
+    <j.4:hasSourceActivity rdf:resource="http://www.order.com/model.rdf#Activity1"/>
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Transition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#BusinessPartner2">
+    <rdf:type rdf:resource="http://www.spi.com/businesspartner.owl#Person"/>
+    <rdf:type rdf:resource="http://www.spi.com/businesspartner.owl#Customer"/>
+    <j.0:hasEmailAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adam.williams@domain.com</j.0:hasEmailAddress>
+    <j.0:hasLastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Williams</j.0:hasLastName>
+    <j.0:hasFirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adam</j.0:hasFirstName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#WorkflowEvent4">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#WorkflowEvent3"/>
+    <j.2:originatedFromWorkflowInstance rdf:resource="http://www.order.com/model.rdf#WorkflowInstance2"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#WorkflowEvent3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Activity3">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#ApplicationImplementationActivity"/>
+    <j.4:partOfWorkflow rdf:resource="http://www.order.com/model.rdf#Workflow1"/>
+    <j.4:hasActivityName>Send Positive Answer</j.4:hasActivityName>
+    <j.4:precededByActivity rdf:resource="http://www.order.com/model.rdf#Activity2"/>
+    <j.4:hasApplicationPerformer rdf:resource="http://www.order.com/model.rdf#Application3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Application1">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <j.4:hasApplicationName>NewOrderApp</j.4:hasApplicationName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent3">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance2"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30000</j.2:hasTimeMilli>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#Application5">
+    <rdf:type rdf:resource="http://www.spi.com/workflow.owl#Application"/>
+    <j.4:hasApplicationName>ForwardOrderApp</j.4:hasApplicationName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent7">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#RunningEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance4"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70000</j.2:hasTimeMilli>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#WorkflowInstance1">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#WorkflowInstance"/>
+    <j.2:definedByWorkflow rdf:resource="http://www.order.com/model.rdf#Workflow1"/>
+    <j.2:hasBusinessPartnerContext rdf:resource="http://www.order.com/model.rdf#BusinessPartner1"/>
+    <j.2:generatedBySystem rdf:resource="http://www.order.com/model.rdf#System1"/>
+    <j.2:hasEconomicObjectContext rdf:resource="http://www.order.com/model.rdf#EconomicObject1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent12">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance6"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent11"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent11"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.order.com/model.rdf#ActivityEvent16">
+    <rdf:type rdf:resource="http://www.spi.com/event.owl#CompletedEvent"/>
+    <j.2:originatedFromActivityInstance rdf:resource="http://www.order.com/model.rdf#ActivityInstance8"/>
+    <j.2:hasTimeMilli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160000</j.2:hasTimeMilli>
+    <j.2:precededBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent15"/>
+    <j.2:causedBy rdf:resource="http://www.order.com/model.rdf#ActivityEvent15"/>
+    <j.2:producedByApplication rdf:resource="http://www.order.com/model.rdf#Application4"/>
+  </rdf:Description>
+</rdf:RDF>
